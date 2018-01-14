@@ -1,0 +1,829 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Week 2]{Stat 201: Statistics I\\ Week 2 }
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date{May 22, 2017}
+
+
+\begin{document}
+\frame{\titlepage}
+
+% Chapter 2
+\setcounter{section}{1}
+\section{Summarizing and Graphing Data}
+
+% Section 2.3
+\setcounter{subsection}{2}
+\subsection{Histograms}
+
+\begin{frame}{Histograms}
+\begin{block}{}
+A \bt{histogram} is a graphical representation of a frequency distribution of quantitative data. This allows the distribution of the data to be more easily visualized.
+\end{block}
+
+\begin{center}
+\includegraphics[width=4in]{../images/ch2_sunlight_hist}
+\end{center}
+\end{frame}
+
+\begin{frame}{Properties of histograms}
+\begin{block}{}
+\begin{itemize}
+\item A graph of bars of equal width drawn adjacent to each other.
+\pause
+\item The horizontal scale (x-axis) represents values of the quantitative data. Each bar represents a class, or range of values, from a frequency table. 
+\pause
+\item The vertical scale (y-axis) represents frequency (counts), or proportions (relative frequency) or percentages (percentage frequency).
+\pause
+\item The number of bars is largely an aesthetic choice. There should be enough bars to adequately show the shape of the distribution, but too many can make a ``busy" graph that's hard to read. Most software will automatically choose the number of bars.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Histograms and normal distributions}
+\begin{block}{}
+Remember: A \bt{normal distribution} can be identified from a frequency table that has the following characteristics:
+\begin{itemize}
+\item The frequencies start low, increase to a high point and then decrease to low frequencies at the end
+\item The frequencies are approximately symmetric around the high point.
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{}
+Graphically, normal distributions are commonly known as ``bell curves". Histograms can be used to recognize when data follows a normal distribution.
+\end{block}
+\end{frame}
+
+\begin{frame}{Histograms and normal distributions, examples}
+
+{\centering
+\includegraphics[width=4in]{../images/ch2_hist_norm}
+\par}
+\bigskip
+\pause
+\begin{block}{}
+\centering \large Normal
+\end{block}
+\end{frame}
+
+\begin{frame}{Histograms and normal distributions, examples}
+
+{\centering
+\includegraphics[width=4in]{../images/ch2_hist_rskew}
+\par}
+\bigskip
+\pause
+\begin{block}{}
+\centering \large Right skewed
+\end{block}
+\end{frame}
+
+\begin{frame}{Histograms and normal distributions, examples}
+
+{\centering
+\includegraphics[width=4in]{../images/ch2_hist_lskew}
+\par}
+\bigskip
+\pause
+\begin{block}{}
+\centering \large Left skewed
+\end{block}
+\end{frame}
+
+% Section 2.4
+\subsection{Graphs that Enlighten and Graphs that Deceive}
+
+\begin{frame}{Types of graphs}
+
+\begin{block}{}
+There are many types of graphs. Deciding which to use depends on the type of data involved and the message to be delivered.
+\end{block}
+\end{frame}
+
+\begin{frame}{Types of graphs: dotplots}
+\begin{block}{}
+A \bt{dotplot} is similar to a histogram. 
+\begin{itemize}
+\item The x-axis represents values of the quantitative data
+\item Instead of bars, a dot is placed for each instances of a value
+\end{itemize}
+\end{block}
+\bigskip
+{\centering
+\includegraphics[width=4in]{../images/ch2_dotplot}
+\par}
+\end{frame}
+
+\begin{frame}{Types of graphs: frequency polygon}
+\begin{block}{}
+A \bt{frequency polygon} is similar to a histogram.
+\begin{itemize}
+\item Instead of bars, a single dot is drawn above the midpoint of each class at a height representing frequency.
+\item Lines are drawn between the points.
+\end{itemize} 
+\end{block}
+\bigskip
+{\centering
+\includegraphics[width=3.5in]{../images/ch2_freqpoly}
+\par}
+
+\end{frame}
+
+
+\begin{frame}{Types of graphs: stem-and-leaf plots}
+\begin{block}{}
+A \bt{stem-and-leaf plot} is also used display frequencies of quantitative data
+\begin{itemize}
+\item Each numeric value is separated into two parts, the leftmost digits (the stem) and the last digit (the leaf). For example, 142 $\implies$ 14 and 2.
+\item Each stem is arranged vertically on the left side of the graph.
+\item Every leaf belonging to a stem is listed to the right, in numeric order.
+\end{itemize}
+\end{block}
+\pause
+
+\begin{exampleblock}{Example}
+\begin{columns}
+\column{.5\textwidth}
+\centering
+\begin{tabular}{c c c | c}
+Value & $\implies$ & Stem & Leaf\\
+142 && 14 & 2\\
+146 && 14 & 6\\
+138 && 13 & 8\\
+143 && 14 & 3
+\end{tabular}
+\pause
+\column{.5\textwidth}
+\centering
+Stem-and-leaf plot\\
+
+\begin{tabular}{c|l}
+13 & 8\\
+14 & 2 3 6
+\end{tabular}
+\end{columns}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Stem-and-leaf plot, example}
+\bigskip
+{\centering
+\includegraphics[width=4.25in]{../images/ch2_stem}
+\par}
+
+\end{frame}
+
+\begin{frame}{Types of graphs: bar graph}
+\begin{block}{}
+A \bt{bar graph} displays frequencies of categorical data.
+\begin{itemize}
+\item The horizontal scale (x-axis) represents values of the categorical data.
+\item The vertical scale (y-axis) represents frequencies (or proportions or percentages).
+\item Often, but not always, bars are drawn with a gap between values.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Bar graph, example}
+\bigskip
+{\centering
+\includegraphics[width=4in]{../images/ch2_bar}
+\par}
+
+\end{frame}
+
+\begin{frame}{Types of graphs: Pareto charts}
+
+\begin{block}{}
+A \bt{Pareto chart} is very similar to a bar graph, except the bars are arranged from most frequent to least, left to right.
+\begin{itemize}
+\item Can be confusing if used with ordinal data.
+\end{itemize} 
+\end{block}
+
+\bigskip
+{\centering
+\includegraphics[width=3in]{../images/ch2_pareto}
+\par}
+
+\end{frame}
+
+\begin{frame}{Types of graphs: pie charts}
+
+\begin{block}{}
+A \bt{pie chart} displays relative frequencies of categorical data as ``slices" of a whole circle. The ``slices'' must be labelled or distinguished by color.
+\end{block}
+
+\bigskip
+{\centering
+\includegraphics[width=3.5in]{../images/ch2_pie}
+\par}
+
+\end{frame}
+
+\begin{frame}{Types of graphs: scatterplots}
+\begin{block}{}
+A \bt{scatterplot} displays the relationship between paired quantitative variables.
+\begin{itemize}
+\item The x-axis represents one variable and the y-axis the other.
+\item A dot (or other symbol) for each data pair is placed at the appropriate x and y values.
+\end{itemize} 
+\end{block}
+
+\bigskip
+{\centering
+\includegraphics[width=2.9in]{../images/ch2_scatter}
+\par}
+
+\end{frame}
+
+\begin{frame}{Types of graphs: time series}
+\begin{block}{}
+A graph of paired quantitative data where one variable represents time is called a \bt{time series}. It is much like a scatterplot, except\ldots
+\begin{itemize}
+\item The x-axis always represents the time variable.
+\item Often a line is drawn between the points.
+\end{itemize}
+\end{block}
+\bigskip
+{\centering
+\includegraphics[width=3in]{../images/ch2_timeseries}
+\par}
+
+\end{frame}
+
+\begin{frame}{Graphs that deceive}
+\begin{block}{}
+There are two types of bad graphs:
+\begin{itemize}
+\item Sometimes a graph is factually incorrect, whether because of errors in the data or a mistake in creating the graph. This is often difficult to detect without access to the original data.
+\item Sometimes graphs are technically correct, but designed to give a false impression of the data. Part of being a critical consumer of statistics is learning to recognize these misleading graphs.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Misleading graphs: non-zero axis}
+\begin{block}{}
+A \bt{non-zero axis} is when one of the axis has a scale which does not include zero. This can make the relative sizes of the graph items to be distorted, especially in histograms or bar graphs.
+\end{block}
+\pause
+\begin{center}
+\includegraphics[width=3.75in]{../images/ch2_bad_nonzero}\par
+\end{center}
+\end{frame}
+
+\begin{frame}{Non-zero axis, fixed}
+\begin{center}
+\includegraphics{../images/ch2_bad_nonzero_fixed} 
+\end{center}
+\end{frame}
+
+\begin{frame}{Misleading graphs: pictographs}
+\begin{block}{}
+A \bt{pictograph} uses pictures or 3D objects to represent size, rather than simple bars or points. This can also distort relative sizes.
+\end{block}
+
+\pause
+\begin{exampleblock}{Example}
+Suppose we wanted to graph the difference in sales between two oil companies, one of which is has twice the sales as the other. If we created a pictograph, we would draw the height of the larger sales twice as tall as the other.
+\begin{itemize}
+\item If we used a pictures, such as a company logos, the larger would have 4 times the area.
+\item If we used a 3D object, such as an oil barrel, the larger would have 8 times the volume. 
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Pictograph, example}
+\begin{center}
+\includegraphics[width=4.5in]{../images/ch2_fastfood_pictograph}
+\end{center}
+\begin{block}{}
+Note that KFC has twice the sales of Starbucks and McDonald's is about 4 times Burger King, but both differences appear much greater.
+\end{block}
+\end{frame}
+
+\begin{frame}{Misleading graphs: pie chart abuse}
+\begin{block}{}
+Since pie charts represent portions of a whole, the slices should always\\ add up to 100\%.
+\end{block}
+\pause
+\begin{center}
+\includegraphics[width=3.2in]{../images/ch2_bad_piechart}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{No. Just no.}
+\begin{center}
+\includegraphics[width=3.5in]{../images/ch2_sb_piechart}
+\end{center}
+\end{frame}
+
+% Chapter 3
+\setcounter{section}{2}
+\section{Statistics for Describing, Exploring, and Combining Data}
+
+% Section 3.2
+\setcounter{subsection}{1}
+\subsection{Measures of Center}
+
+\begin{frame}
+\frametitle{Measures of center}
+\begin{block}{}
+In order to understand a data set, values are calculated which summarize the distribution of the data or describe various properties of the data. These are, unsurprisingly, called \bt{descriptive} or \bt{summary} statistics.
+\end{block}
+\pause
+\begin{block}{}
+Perhaps the most important of these, \bt{measures of center} are a way of  representing the value of the middle of the data.\\
+\medskip
+There are four measures of center discussed in this section:
+\begin{itemize}
+\item mean
+\item median
+\item mode
+\item midrange
+\end{itemize} 
+\end{block}
+\end{frame}
+
+\begin{frame}{Mean}
+\begin{block}{}
+The \bt{mean} (the arithmetic mean) is the measure of center calculated by adding the values of the data set and dividing by the size of the data set. Also known as the average.
+\begin{itemize}
+\item Only makes sense with quantitative data
+\item Sensitive to outliers (extreme or unusual values) and skewed data distributions.
+\end{itemize}
+\end{block}
+
+\pause
+\begin{exampleblock}{To calculate}
+Let $X$ be sample of size $n$ of quantitative data with values $\sam x$. Then,
+\[\bar x = \frac{\sum x_i}{n}\]
+$\bar x$ is the mean of the sample.
+\begin{itemize}
+\item $\sum$ means add all the $x_i$'s, where $i$ is between 1 and $n$
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Mean, example}
+\begin{exampleblock}{Example}
+From the Stat 201 survey, we have the ages of 8 people.
+
+\begin{itemize}
+\item The sample is $X = \set{22, 32, 46, 50, 33, 38, 20, 24}$
+\item The sample size is $n=8$
+\pause
+\item The sum of the data is
+\[\sum x_i = 22 + 32 + 46 + 50 + 33 +  38 + 20 + 24 = 265\]
+\pause
+\item The mean is
+\[\bar x = \frac {\sum x_i}{n} = \frac {265} 8 = 33.125\]
+\end{itemize}
+\smallskip
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Median}
+\begin{block}{}
+The \bt{median} is the value that is greater than or equal to 50\% of the data and less than or equal to 50\% of the data.
+\begin{itemize}
+\item Can be used with quantitative and ordinal data
+\item Not sensitive to extreme values (\bt{resistant} measure of center)
+\end{itemize}
+\end{block}
+
+\pause
+\begin{exampleblock}{To calculate}
+Arrange the data in order, from lowest to highest.
+\begin{itemize}
+\item If $n$ is odd, the middle value is the median.
+\item If $n$ is even, the median is the mean of the two middle values.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Median, example}
+\begin{exampleblock}{Example}
+From the Stat 201 survey, we have the ages of 8 people.
+
+\begin{itemize}
+\item The sample is $X = \set{22, 32, 46, 50, 33, 38, 20, 24}$
+\pause
+\item Arranged in order, the sample looks like
+\[20 \quad 22 \quad 24 \quad 32 \quad 33 \quad 38 \quad 46 \quad 50 \]
+\pause
+\item Since $n$ is even, find the the mean of the two middle values.
+\[20 \quad 22 \quad 24  \underbrace{32 \quad 33}_{(32+33)/2 = 32.5}  38 \quad 46 \quad 50 \]
+\pause
+\item The median is $\tilde x = 32.5$
+\end{itemize}
+\smallskip
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Mean vs. Median}
+\begin{exampleblock}{}
+Suppose in our age data set, we replaced the $50$ with a $85$.
+\begin{itemize}
+\item Mean goes from $33.125$ to $37.5$
+\item Median remains unchanged at $32.5$
+\end{itemize}
+\end{exampleblock}
+
+\pause
+\begin{block}{}
+This is why median is called a \bt{resistant} statistic.
+\begin{itemize}
+\item Median is used when we don't want a few extreme values to distort a more reasonable middle, such as house prices or incomes.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Mean vs. Median, cont.}
+\begin{exampleblock}{}
+Suppose instead of calculating a grade point average (mean), we calculated a grade point median. Consider a student who got A's in 6 classes and D's in 4.
+\begin{itemize}
+\item The median grade point is 4, an A.
+\item The GPA for such a student would be 2.8.
+\end{itemize}
+\end{exampleblock}
+
+\pause
+\begin{block}{}
+The median does not consider all values of a data set. The mean does.
+\begin{itemize}
+\item Mean is used when all values are important or when we expect to have roughly symmetric data.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Mode}
+\begin{block}{}
+The \bt{mode} is the data value with highest frequency.
+\begin{itemize}
+\item Can be used with any kind of data.
+\item A data set might have more than one mode, or there might not be any mode.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Mode, example} 
+\begin{exampleblock}{Examples}
+\begin{itemize}
+\item The age data, $ \set{22, 32, 46, 50, 33, 38, 20, 24}$, has no mode.
+\pause
+\item From the survey, favorite kind of taco had these responses:
+\[\set{\text{Beef, Beef, Fish, Shrimp, Beef, Pork, Chicken, Beef, Chicken, Beef}}\]
+The mode is ``Beef'' with a frequency of five.
+\pause
+\item Suppose a sample of the class got the following grades on a quiz:
+\[\set{\text{A, C, B, A, A, B, C, B}}\]
+The modes are A and B, with frequencies of three each.
+\end{itemize}
+
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Midrange}
+\begin{block}{}
+The \bt{midrange} is the value half way between the minimum and maximum values. Calculate by finding the mean of the minimum and maximum.
+\begin{itemize}
+\item Only makes sense with quantitative data.
+\item \emph{Very} sensitive the extreme values.
+\item Easy to calculate, but rarely used.
+\end{itemize}
+\end{block}
+
+\pause
+\begin{exampleblock}{Example}
+The age data is $X = \set{22, 32, 46, 50, 33, 38, 20, 24}$.
+\begin{itemize}
+\item The minimum age is $20$ and the maximum age is $50$.
+\item The midrange is 
+\[\frac {\min(X) + \max(X)}{2} = \frac {20 + 50}{2} = 35\]
+\end{itemize}
+\smallskip
+\end{exampleblock}
+
+\end{frame}
+
+% Section 3.3
+\subsection{Measures of Variation}
+
+
+\begin{frame}{Measures of variation}
+\begin{block}{}
+Another important class of descriptive statistics are \bt{measures of variation} which describe how much the data is spread out.\\
+\medskip
+There are four measures of variation discussed in this section:
+\begin{itemize}
+\item Range
+\item Variance
+\item Standard deviation
+\item Coefficient of variation
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{Range}
+\begin{block}{}
+The \bt{range} is the difference between the maximum and minimum values.
+\begin{itemize}
+\item Like the midrange, very sensitive to extreme values.
+\end{itemize}
+\end{block}
+
+\pause
+\begin{exampleblock}{Example}
+The age data is $X = \set{22, 32, 46, 50, 33, 38, 20, 24}$.
+\begin{itemize}
+\item The minimum age is $20$ and the maximum age is $50$.
+\pause
+\item The range is 
+\[\max(x) - \min(X) = 50 - 20 = 30\]
+\end{itemize}
+\smallskip
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Variance and standard deviation}
+\begin{block}{}
+The \bt{variance} is the mean of the squared difference of the data from the mean. The \bt{standard deviation} is the square root of the variance.
+\begin{itemize}
+\item More simply, the standard deviation is the average distance of the data from the data mean (the center).
+\item Always non-negative. A zero standard deviation means all the data are the same value.
+\item Sensitive to extreme values.
+\item The units of standard deviation are the same as the data. Variance units are the data units squared.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Variance and standard deviation, calculation}
+\begin{exampleblock}{To calculate}
+Let $X$ be sample of size $n$ of quantitative data with values $\sam x$ and sample mean $\bar x$. Then,
+\[\var(X) = s^2 = \frac{\sum (x_i - \bar x)^2}{n-1} \qquad \text{and} \qquad  \f{SD}(X) = s = \sqrt{s^2}\]
+\begin{itemize}
+\item Note: Never calculate this by hand. Use technology.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Variance and standard deviation, example}
+\begin{exampleblock}{Example}
+The age data is $X = \set{22, 32, 46, 50, 33, 38, 20, 24}$. The sample size is $n=8$ and the sample mean is $\bar x = 33.125$
+\begin{itemize}
+\pause
+\item The variance is 
+\begin{align*}
+s^2 &= \frac{\sum (x_i - \bar x)^2}{n-1}\\
+&= \frac{(22-33.125)^2 + \cdots + (24-33.125)^2}{7}\\
+&= 122.125 
+\end{align*}
+\pause
+\item The standard deviation is
+\[s = \sqrt{s^2} = \sqrt{122.125} = 11.05\]
+\end{itemize}
+\smallskip
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Coefficient of variation}
+\begin{block}{}
+The \bt{coefficient of variation} is the standard deviation expressed as a percentege of the mean.
+\begin{itemize}
+\item Useful for comparing samples from two different populations.
+\end{itemize}
+\end{block}
+
+\pause
+\begin{exampleblock}{To calculate}
+For sample $X$ with mean $\bar x$ and standard deviation $s$, the coefficient of variation is
+\[\frac s {\bar x} \times 100\%\]
+\end{exampleblock}
+
+\pause
+\begin{exampleblock}{Example}
+The age data has mean of $\bar x = 33.125$ and standard deviation of $s=11.05$. The coefficient of variation is 
+\[\frac {11.05}{33.125} \times 100\% = 33.36\%\]
+\end{exampleblock}
+\end{frame}
+
+
+\begin{frame}{Notation}
+\begin{block}{}
+Remember, values that describe the properties of populations are called \bt{parameters} and values that describe samples are called \bt{statistics}. Notationally, in math formulas or when abbreviating, Greek letters are used to refer to parameters and Latin letters are used to refer to statistics.
+\pause
+\begin{center}
+\begin{tabular}{c |r l | c}
+Property & \multicolumn{2}{c|}{Parameter} & Statistic\\
+\hline
+Mean & $\mu$ & (mu) & $\bar x$\\
+Variance & $\sigma^2$ &(sigma-squared) & $s^2$\\
+Standard deviation & $\sigma$ &(sigma) & $s$
+\end{tabular}
+\end{center} 
+\end{block}
+\end{frame}
+
+% Section 3.4
+\subsection{Measures of Relative Standing and Boxplots}
+
+\begin{frame}{Measures of relative standing}
+\begin{block}{}
+\bt{Measures of relative standing} describe the location of a given data value with a data distribution or a data set.\\
+\medskip
+Two measures of relative standing are discussed in this section:
+\begin{itemize}
+\item Z-scores
+\item Percentiles
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Z-scores}
+\begin{block}{}
+A \bt{z-score} describes the relative position of a data value within a data distribution.
+\begin{itemize}
+\pause
+\item Another way to put it is a z-score is the number of standard deviations that a particular value is above or below the mean.
+\pause
+\item Z-scores are standardized, so they can be used to compare values from different populations.
+\pause
+\item A positive z-score means the value is greater than the mean and a negative z-score means that it is below the mean. 
+\pause
+\item Z-scores can be calculated for samples or populations, if the population mean and standard deviation are known.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Z-scores, calculations}
+\begin{exampleblock}{To calculate}
+\begin{itemize}
+\item For a sample $X$ with sample mean $\bar x$ and standard deviation $s$, the z-score for a value $x$ is
+\[z = \frac{x - \bar x}{s}\]
+\smallskip
+\pause
+\item For a population $\Rho$ with population mean $\mu$ and standard deviation $\sigma$, the z-score for value $x$ is
+\[z = \frac{x - \mu}{\sigma}\]
+\end{itemize} 
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Z-scores, example}
+\begin{exampleblock}{Example}
+The age data has mean of $\bar x = 33.125$ and SD of $s=11.05$.
+\begin{itemize}
+\pause
+\item Suppose a new student joins the class. His age is 44. He has an age $z$-score of
+\[z = \frac{x - \bar x}{s} = \frac {44-33.125}{11.05} = \frac {10.875}{11.05} = 0.984\]
+\pause
+His age is almost a standard deviation above the class mean.
+\smallskip
+\pause
+\item Another student joins the class. Her age is 27. She has an age $z$-score of
+\[z = \frac{x - \bar x}{s} = \frac {27-33.125}{11.05} = \frac {-6.125}{11.05} = -0.554\]
+\pause
+Her age is about a half standard deviation below the class mean.
+\end{itemize}
+
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Unusual values}
+
+{\centering
+\includegraphics[width=4.5in]{../images/ch3_unusual} \par
+}
+
+\begin{block}{}
+A value is called \bt{unusual} if it has a z-score $z$ such that $z< -2$ or $z > 2$. A value is \bt{ordinary} if $z$ is between $-2$ and $2$.
+\end{block}
+
+\pause
+\begin{exampleblock}{Example}
+Our two new students with z-scores of $0.984$ and $-0.554$ both have ordinary ages. A third new student aged 85, with a z-score of $z = (85-33.125)/11.05 = 4.69$, has an unusual age.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Percentiles}
+\begin{block}{}
+\bt{Percentiles} measure relative position within a data set as order rank. In other words, the value at the $p$th percentile (written as $P_p$) in a data set is greater than $p$\% of the data.
+\end{block}
+
+\pause
+\begin{exampleblock}{To calculate}
+To find the percentile of a value $x$ in a data set,
+\[\%\text{ile} = \frac{\text{number of values} < x}{n} \times 100\%\]
+\pause
+To find the value of $P_p$ (the $p$th percentile), calculate the rank,
+\[ r = \frac p {100} \times n\]
+If $r$ is a whole number, $P_p$ is the mean of the $r$th and $(r+1)$th values. If not, round up. Then, $P_p$ is the $r$th value in an ordered list.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Percentile, example}
+\begin{exampleblock}{Example}
+The age data, in order is, 
+\[20 \quad 22 \quad 24 \quad 32 \quad 33 \quad 38 \quad 46 \quad 50 \]
+
+\begin{itemize}
+\pause
+\item The percentile of the value 38 is
+\[\frac{\text{number of values} < x}{n} \times 100\% = \frac{5}{8} \times 100\% = 62.5 \,\% \implies P_{63}\]
+\pause
+\item To find the 30th percentile, $P_{30}$, calculate rank
+\[ r= \frac {p}{100} \times n = \frac {30}{100} \times 8 = 2.4 \]
+Round up $r$ to $3$. $P_{30}$ is the 3rd value, $24$.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Quartiles}
+\begin{block}{}
+The \bt{quartiles} are values that divide the data set into 4 parts, or quarters.
+\[Q_1 = P_{25} \qquad Q_2 = P_{50} \qquad Q_3 = P_{75}\]
+\begin{itemize}
+\pause
+\item Note: The median is equivalent to $Q_2$ and $P_{50}$.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{5 number summary}
+\begin{block}{}
+The \bt{5 number summary} summarize the distribution of a data set.\\
+\medskip
+The 5 numbers are:
+\begin{itemize}
+\item Minimum
+\item $Q_1$
+\item Median (or $Q_2$)
+\item $Q_3$
+\item Maximum
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{5 number summary, example}
+\begin{exampleblock}{Example}
+The age data, in order is, 
+\[20 \quad 22 \quad 24 \quad 32 \quad 33 \quad 38 \quad 46 \quad 50 \]
+The 5 number summary is
+\[\underbrace{20}_{\min} \quad \underbrace{23}_{Q_1} \quad \underbrace{32.5}_{\f{med}} \quad \underbrace{42}_{Q_3} \quad \underbrace{50}_{\max}\]
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Boxplots}
+\begin{block}{}
+A \bt{boxplot} is a graph depicting the 5 number summary.
+
+\end{block}
+{\centering
+\includegraphics[width=4in]{../images/ch3_boxplot}\par
+}
+\end{frame}
+\end{document}

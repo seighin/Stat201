@@ -1,0 +1,181 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Midterm Review]{Stat 201: Statistics I\\Midterm Review}
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[Oct 16, 2017]{October 16, 2017}
+
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{About the midterm exam}
+\begin{block}{}
+\begin{itemize}
+\item Available on MyStatLab following class on 10/9
+\item Due by end of day on 10/16
+\item 23 questions, 100 points, covering chapters 1 - 6
+\item Every question on exam has been a homework question, though the details will likely be different
+\item Time limit: 4 hours, must be completed in one sitting
+\item Can use any resource (book, notes, internet), except other people
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 1}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Know the difference between a parameter and a statistic
+\item Identify type of variable
+\begin{itemize}
+\item Quantitative: Discrete or continuous
+\item Categorical (Qualitative)
+\end{itemize}
+\item Identify levels of measurement
+\begin{itemize}
+\item Nominal
+\item Ordinal
+\item Interval
+\item Ratio
+\end{itemize}
+\item Identify type of study
+\begin{itemize}
+\item Experimental
+\item Observational
+\end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Chapter 2}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Identify a normal distribution from a frequency table
+\item Build a frequency table from data
+\item Build a cumulative frequency table from a frequency table
+\item Identify a histogram from a frequency table and assess normality
+\item Types of graphs, identify proper graph
+\begin{itemize}
+\item Scatterplot
+\item Time series
+\item Dotplot
+\item Stem-and-leaf plot
+\item Bar chart
+\item Pie chart
+\item Pareto chart
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 3}
+\begin{block}{}
+\large
+\begin{itemize}
+\item From a set of data, find (with proper units):
+\begin{itemize}
+\item Mean
+\item Median
+\item Mode
+\item Midrange
+\item Range
+\item Variance
+\item Standard deviation
+\end{itemize}
+\item Calculate $z$-scores from mean and standard deviation
+\item Identify unusual values as more than two SDs from mean
+\item Calculate 5 number summary and identify corresponding boxplot
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 4}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Calculate probabilities:
+\begin{itemize}
+\item From proportions (3 in 12)
+\item From a 2 $\times$ 2 contingency table
+\item Complements
+\item Addition rule
+\item Multiplication rule
+\item Complex events ("At least one...")
+\item Conditional events
+\end{itemize}
+\item Understand false positive and false negative
+\item Identify disjoint events
+\item Identify independent and dependent events
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 5}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Find the mean and standard deviation for an arbitrary probability distribution
+\item Find probability of event from a binomial distribution
+\item Find the mean, standard deviation and boundaries for unusual values
+\item Determine of a given value is unusual
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 6}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Find probability of event from uniform distribution
+\item Find probability from standard normal, $z$, distribution
+\item Find $z$-score which corresponds to given probability
+\item Find probability of event from a non-standard normal distribution
+\item Find value from non-standard normal distribution which corresponds to given probability
+\item Find probability of event from sampling distribution, using the Central Limit Theorem
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}

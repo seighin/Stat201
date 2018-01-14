@@ -1,0 +1,642 @@
+\documentclass[xcolor=table, handout]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Chapter 5]{Stat 201: Statistics I\\ Chapter 5 }
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[Sept 25, 2017]{September 25, 2017}
+
+
+\begin{document}
+\frame{\titlepage}
+
+% Chapter 5
+\setcounter{section}{4}
+\section{Discrete Probability Distributions}
+
+
+% Section 5.1
+\subsection{Probability Distributions}
+
+\begin{frame}{Random variables}
+\begin{block}{}
+{\large A \bt{random variable} is a variable that has a numeric value determined by chance from a range of possible values.}
+
+\begin{itemize}
+\pause\item An outcome of a trial
+\pause\item Usually designated with a capital letter ($X, \, Y,$ etc.)
+\pause\item Lowercase letters refer to specific values of the random variable
+\pause\item Thus, $P(X=x)$ means the probability that the random variable $X$ takes the specific value $x$.
+\end{itemize}
+\end{block}
+
+\pause
+\begin{exampleblock}{Example}
+\begin{itemize}
+\item $X$ = the number of heads from three coin flips
+\item $Y$ = the sum of two dice
+\item $Z$ = the midterm score of a randomly selected student
+\begin{itemize}
+\item A students grade (A, A-, B+, etc.) can not be used as a random variable because it is not numeric,
+\item ... Unless, the grade is coded as a number (i.e. A = 4.0, A- = 3.7, etc.)
+\end{itemize}
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Types of random variables}
+\begin{block}{}
+Recall, numeric variables can be classified as \bt{discrete} or \bt{continuous}. Random variables also can be either discrete or continuous.
+\end{block}
+
+\pause
+\begin{exampleblock}{Example}
+Discrete random variables:
+\begin{itemize}
+\item Number of heads on three coin flips
+\item Number of defective insulin test strips in a box of 50
+\item Number of customers to enter a store in the next 10 minutes
+\end{itemize}
+\pause
+Continuous random variables:
+\begin{itemize}
+\item Height or weight of a test subject
+\item Survival time of a cancer patient
+\item Price of a company's stock at a particular moment
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Probability distributions}
+\begin{block}{}
+{\large The collection of probabilities of all the possible values of a random variable is known as the \bt{probability distribution} of the random variable.}
+\begin{itemize}
+\pause\item Each probability is between 0 and 1
+\pause\item The probabilities must add up to 1
+\pause\item Often displayed in tables (if practical)
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Probability distributions, example}
+\begin{exampleblock}{Example}
+A restaurant wants to track its taco sales. It records how many tacos customers order with each visit. The results are in the table,\\
+\medskip
+{\centering \renewcommand{\arraystretch}{1}
+\begin{tabular}{c | c}
+Number of tacos & Probability\\
+\hline
+0 & 0.35\\
+1 & 0.2\\
+2 & 0.3\\
+3 & 0.1\\
+4 & 0.05
+\end{tabular}\par
+\renewcommand{\arraystretch}{1.5}}
+\medskip
+Is this a probability distribution?
+\begin{itemize}
+\pause\item These are probabilities of every possible outcome of a trial (customer making an order).
+\pause\item The probabilities add to 1.
+\pause\item It is a probability distribution.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Probability distributions, example}
+\begin{exampleblock}{Example}
+The restaurant introduces a new "Super Taco" (beef, chicken and shrimp). It wonders if larger groups are more likely to order the new item. The results are in the table,\\
+\medskip
+{\centering \renewcommand{\arraystretch}{1}
+\begin{tabular}{c | c}
+Number in group & Probability of ordering \\
+\hline
+1 & 0.05\\
+2 & 0.03\\
+3 & 0.04\\
+4 or more & 0.15
+\end{tabular}\par
+\renewcommand{\arraystretch}{1.5}}
+\medskip
+Is this a probability distribution?
+\begin{itemize}
+\pause\item The probabilities are for a different event (ordering a Super Taco) than the values (number in group). 
+\pause\item The probabilities do not add to 1.
+\pause\item It is not a probability distribution.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Event probabilities}
+\begin{block}{}
+The calculate the probability of an event given a probability distribution, simply add the probabilities of the outcomes which comprise the event.
+\end{block}
+\pause
+\begin{exampleblock}{Example}
+{\centering \renewcommand{\arraystretch}{1}
+\begin{tabular}{c | c}
+Number of tacos & Probability\\
+\hline
+0 & 0.35\\
+1 & 0.2\\
+2 & 0.3\\
+3 & 0.1\\
+4 & 0.05
+\end{tabular}\par
+\renewcommand{\arraystretch}{1.5}}
+\bigskip
+What is the probability of a customer ordering less than two tacos?
+\pause\[P(X<2) = P(X = 0 \text{ or } 1) = P(0) + P(1) = 0.35 + 0.2 = 0.55 \]
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Weighted means}
+\begin{block}{}
+{\large A \bt{weighted mean} is the mean of values that are not considered equally, or do not have equal importance.}
+\begin{itemize}
+\item Each value has an associated weight, which is its relative importance.
+\item To calculate, let $x_i$ be a value and $w_i$ its weight.
+\[\mu_w = \frac {\sum w_i \times x_i}{\sum w_i}\]
+\end{itemize}
+\end{block}
+\pause
+\begin{exampleblock}{Example}
+Fiona buys 4 lbs. of hamburger at \$4.89 / lb. and 2 lbs. of steak at \$11.99 / lb. What is the average price per pound she is paying?
+\[ \$/lb. = \frac {4 \times 4.89 + 2 \times 11.99}{6} = \frac {43.54}{6} = 7.26\]
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Mean of probability distributions}
+\begin{block}{}
+The mean of a probability distribution is a weighted mean of the possible values, with the probability of each as its weight. 
+\begin{itemize}
+\pause\item Since the sum of probabilities of a distribution is always 1, the divisor of the weighted mean is 1 which we can ignore.
+\pause\item Thus, the mean is
+\[\mu = \sum x_i \cdot P(x_i) \]
+\end{itemize}
+\medskip
+\pause
+The mean of a probability distribution is also known as the \bt{expected value} of the random variable.
+\begin{itemize}
+\item Denoted with an ``E", as in 
+\[\E(X) = \mu \]
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Mean, exmaple}
+\begin{exampleblock}{Example}
+{\centering \renewcommand{\arraystretch}{1}
+\begin{tabular}{c | c}
+Number of tacos & Probability\\
+\hline
+0 & 0.35\\
+1 & 0.2\\
+2 & 0.3\\
+3 & 0.1\\
+4 & 0.05
+\end{tabular}\par
+\renewcommand{\arraystretch}{1.5}}
+\bigskip
+
+What is the mean number of tacos ordered at the restaurant? That is, how many tacos should the restaurant expect each customer to order?\\
+\medskip
+\pause
+{\centering \renewcommand{\arraystretch}{1}
+\begin{tabular}{r l}
+$\E(X) = \mu =$ & $\sum x_i \cdot P(x_i)$\\
+$=$ & $0 \cdot 0.35 + 1 \cdot 0.2 + 2 \cdot 0.3 + 3 \cdot 0.1 + 4 \cdot 0.05$\\
+$=$ & 0 + 0.2 + 0.6 + 0.3 + 0.2\\
+$=$ & 1.3
+\end{tabular}\par
+\renewcommand{\arraystretch}{1.5}}
+
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Standard deviation of probability distributions}
+\begin{block}{}
+Similarly, variance of a probability distribution is the weighted mean of difference from the mean squared and standard deviation is the square root of variance.\\
+\medskip
+Thus,
+\[\sigma^2 = \sum (x_i - \bar x )^2 \cdot P(x_i)\]
+\[\sigma = \sqrt{\sigma^2}\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Standard deviation, example}
+\begin{exampleblock}{Example}
+What is the standard deviation of number of tacos ordered at the restaurant?\\
+\medskip
+\pause
+{\centering \renewcommand{\arraystretch}{1}
+\begin{tabular}{r l}
+$\sigma^2 =$ & $\sum (x_i - \bar x )^2 \cdot P(x_i)$\\
+$=$ & $(0-1.3)^2 \cdot 0.35 + \cdots + (4-1.3)^2 \cdot 0.05$\\
+$=$ & $0.5915 + \cdots + 0.3645$\\
+$=$ & $1.41$\\
+\pause$\sigma = \sqrt{\sigma^2} = $ & $1.19$
+\end{tabular}\par
+\renewcommand{\arraystretch}{1.5}}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Mean and var. of random variables in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Calculators $\to$ Custom
+\item Under ``Values in:" select the column which contains the random variable values
+\item Under ``Weights in:" select the column which contains the random variable probabilities
+\item Click ``Compute!"
+\item Mean and standard deviation will be displayed
+\item Variance can be calculated by squaring the standard deviation
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Unusual events rule of thumb}
+\begin{block}{}
+Recall, the range rule of thumb for unusual values are those values more than 2 standard deviations away from the mean. In other words, $x$ is unusual if
+\[ x < \mu - 2\sigma \qquad \text{or} \qquad x > \mu + 2 \sigma\]
+\end{block}
+\pause
+\begin{exampleblock}{Example}
+From the probability distribution of tacos ordered, $\mu = 1.3$ and $\sigma = 1.19$. What would be an unusual amount of tacos to order?
+\begin{itemize}
+\pause\item The lower bound for unusual values is $\mu - 2\sigma = -1.08$. Since you can't order negative tacos, there is not an unusually low number of tacos to order.
+\pause\item The upper bound for unusual values if $\mu + 2\sigma = 3.86$. Thus, 4 (or more) tacos is an unusually high number of tacos to order.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{More precise definition for unusual events}
+\begin{block}{}
+If the probability of a random variable being equal to an event or takes a value more extreme than than the event is less than some threshold, usually 0.05, then the event is an \bt{unusual event}.\\
+\medskip
+\pause
+That is, if 
+\[P(X \le x \text{ or } X \ge x) < 0.05\]
+then $x$ is an extreme value.
+\end{block}
+\end{frame}
+
+\begin{frame}{Unusual events, example}
+\begin{exampleblock}{Example}
+Tom and Barbara collect eggs from their chickens everyday. The number of eggs they collect follows the following distribution,\\
+\smallskip
+{\centering
+\begin{tabular}{c|cccccccccc}
+Eggs ($x$) & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+\hline
+$P(x)$ & 0.01 & 0.03 & 0.1 & 0.2 & 0.3 & 0.2 & 0.1 & 0.04 & 0.02 & 0
+\end{tabular}\par
+}
+\medskip
+Is collecting only one egg unusual? Is collecting 7 eggs unusual?
+\begin{itemize}
+\pause\item $P(X\le 1) = P(0) + P(1) = 0.01 + 0.03 = 0.04 < 0.05$
+\pause\item $P(X \ge 7) = P(7) + P(8) + P(9) = 0.06 \not < 0.05$
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Rare event rule}
+\begin{block}{}
+The \bt{rare event rule} says that if observed results are unusual, given an assumed probability distribution, then perhaps the assumption is wrong.
+\end{block}
+\pause
+\begin{exampleblock}{Example}
+Recall the example of flipping a coin 1000 times. Under the assumption the coin is fair ($P(H) = P(T) = 1/2$), the expected number of heads is 500.
+\begin{itemize}
+\pause\item Getting 523 heads is not unusual ($P(X \ge 523) = 0.077$). There is no reason to think the coin is not fair.
+\pause\item Getting 46 heads is unusual ($P(X \le 46) = 6.23 \times 10^{-222}$). We would be justified in questioning the assumption that the coin is fair.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}<handout:0>{Group work}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Work on question 1, all parts.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+
+
+% Section 5.2
+\subsection{Binomial Probability Distributions}
+
+\begin{frame}{Binomial distribution}
+\begin{block}{}
+{\large A \bt{binomial distribution} is a probability distribution representing the number of ``successes" in a fixed number of trials with two possible outcomes. }
+\begin{itemize}
+\pause\item The term ``success" is traditional, but can refer to any outcome of interest.
+\end{itemize}
+\end{block}
+\pause
+\begin{exampleblock}{Example}
+\begin{itemize}
+\item The number of students passing the midterm in class
+\begin{itemize}
+\item Passing the midterm is a ``success", failing it is a ``failure"
+\end{itemize}
+\pause\item The number of heads in three coin flips
+\begin{itemize}
+\item Getting a head is a ``success", getting a tail is a ``failure"
+\end{itemize}
+\pause\item The number of of car crashes that result in fatalities
+\begin{itemize}
+\item A fatality is a ``success", no fatalities is a ``failure"
+\end{itemize}
+
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Requirements for binomial distributions}
+\begin{block}{}
+There are four requirements to be considered a binomial distribution:
+\begin{itemize}
+\pause\item The distribution must represent a fixed number of trials
+\pause\item Each trial must have exactly two possible outcomes\\(success / failure)
+\pause\item Each trial must be independent of the other trials
+\pause\item Each trial must have the same probability for success
+\end{itemize}
+\pause The last two requirements are often summarized as ``independent and identically distributed" and abbreviated as ``iid".
+\end{block}
+\end{frame}
+
+\begin{frame}{Requirements for binomial distributions, example}
+\begin{exampleblock}{Example}
+Recall the Metro State Statistics Club, with 6 male members and 4 females members. If the three officer positions are selected randomly, does the number of women selected follow a binomial distribution?
+\begin{itemize}
+\pause\item No. The events are not independent.
+\end{itemize}
+\end{exampleblock}
+\pause
+\begin{exampleblock}{Example}
+An instuctor is trying a new method of testing students. A test is given once a day for five days, with opportunities to practice and ask questions in between each test. Does the number of times a student passes the test follow a binomial distribution?
+\begin{itemize}
+\pause\item No. The probability of success changes (hopefully) with each test.
+\end{itemize}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Requirements for binomial distributions, example}
+\begin{exampleblock}{Example}
+Recall the Youth Risk Behavior Survey (YRBS) which found the probability of a teenaged driver had texted or emailed while driving was 0.404. Suppose this is the probability for the population of teenaged drivers. Suppose 30 teenaged drivers are selected at random. Does the number of those drivers that had texted or emailed while driving follow a binomial distribution?
+\begin{itemize}
+\pause\item Yes. 
+\begin{itemize}
+\item There is a fixed number of trials (30).
+\item Each trial has only two possible outcomes (had or had not texted).
+\item Each trial is independent.
+\item Each trial has the same probability of ``success."
+\end{itemize}
+\end{itemize}
+\end{exampleblock}
+
+\end{frame}
+
+
+\begin{frame}{Notation for binomial distributions}
+\begin{block}{}
+\[X \sim \f{Binom}(n,p)\]
+\begin{itemize}
+\pause\item The random variable $X$ follows a binomial distribution with $n$ trials and $p$ probability of a success.
+\pause\item $q = 1- p =$ the probability of failure
+\pause\item $P(X=x)$ is the probability of getting exactly $x$ successes. $x$ must be between 0 and $n$.
+\end{itemize}
+\end{block}
+\pause
+\begin{exampleblock}{Example}
+The probability a teenaged driver had texted or emailed while driving is 0.404. If the random variable $Y$ is the number of teenaged drivers who had texted or emailed while driving out of a sample of 30,
+\[Y \sim \f{Binom}(30, 0.404)\]
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Probabilities for binomial distributions}
+\begin{block}{}
+The formula for binomial probabilities is
+\[ P(X=x) = \binom n x p^x q^{n-x}\]
+\begin{itemize}
+\pause\item $\ds \binom n x$ is read as ``$n$ choose $x$". It is the number of ways to get $x$ successes in $n$ trials. For example, we previously determined that there were three ways to get two heads in three flips, \{ HHT, HTH, THH \}. Thus, $\ds \binom 3 2$ is 3.
+\pause\item $p^x q^{n-x}$ is the probability of getting $x$ successes and $n-x$ failures in one particular order.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Binomial probabilities in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Calculators $\to$ Binomial
+\item Enter sample size (``n") and probability (``p")
+\item Select appropriate comparison symbol and numeric value
+\item Click ``Compute" if necessary
+\item Probability will be displayed
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Practice: cancer screening}
+\begin{block}{}
+Recall the cancer screening example. Out of 1000 people screened, the probability of a positive test was 0.1. Suppose a sample 40 of those screened were randomly selected.\\
+\medskip
+\pause
+The random variable $X$ is the number who tested positive in the sample. Does $X$ follow a binomial distribution?
+\begin{itemize}
+\pause\item Yes. All the requirements are met.
+\end{itemize}
+\medskip
+\pause
+What is the notation for $X$?
+\begin{itemize}
+\pause\item $X \sim \f{Binom}(40, 0.1)$
+\end{itemize}
+\medskip
+\pause
+What is the probability that exactly 5 people in the sample tested positive?
+\begin{itemize}
+\pause\item $P(X=5) = 0.165$
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Parameters for Binomial Distributions}
+\begin{block}{}
+For $X \sim \f{Binom}(n,p)$,
+\begin{itemize}
+\pause\item Mean:
+\[ \E(X) = \mu = np\]
+\vspace*{-\baselineskip}\pause\item Variance:
+\[\sigma^2 = npq\]
+\vspace*{-\baselineskip}\pause\item Standard deviation:
+\[\sigma = \sqrt{\sigma^2} = \sqrt{npq}\]
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Parameters, example}
+\begin{exampleblock}{Example}
+The random variable $Y$ is the number of teenaged drivers who had texted or emailed while driving out of a sample of 30,
+\[Y \sim \f{Binom}(30, 0.404)\]
+
+Parameters of $Y$:
+\begin{itemize}
+\pause\item $\E(Y) = \mu = np = (30)(0.404) = 12.12$
+\pause\item $\sigma^2 = npq = (30)(0.404)(1-0.404) = 7.22$
+\pause\item $\sigma = \sqrt{\sigma^2} = \sqrt{7.22} = 2.69$
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Unusual values}
+\begin{block}{}
+For a given binomial distribution, the boundaries for unusual values can be found. From the range rule of thumb, the lower boundary is $\mu - 2 \sigma$ and the upper boundary is $\mu + 2\sigma$.
+\end{block}
+\pause
+\begin{exampleblock}{Example}
+For $Y \sim \f{Binom}(30, 0.404)$, $\mu = 12.12$ and $\sigma = 2.69$. What are the unusual values?
+\begin{itemize}
+\pause\item The lower bound for unusual values is $\mu - 2 \sigma = 6.74$
+\pause\item The upper bound for unusual values is $\mu + 2 \sigma = 17.5$
+\pause\item In a random sample of 30 teenaged drivers, it would be unusual to get 6 or fewer, or 18 or more, drivers who had texted or emailed while driving.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}<handout:0>{Group work}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Work on question 2, all parts.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+% Section 5.3
+\subsection{Poisson Probability Distributions}
+
+\begin{frame}{Poisson Probability Distributions}
+\begin{block}{}
+{\large A \bt{Poisson distribution} represents the number of events occurring in a specified interval.} 
+\begin{itemize}
+\pause\item Assumes events are random, independent and uniformly distributed.
+\pause\item Intervals are using lengths of time, but other kind of intervals are possible.
+\end{itemize}
+\end{block}
+\pause
+\begin{exampleblock}{Example}
+\begin{itemize}
+\item The number of fish caught in the next hour
+\item The number of customers to come into a store between 1 and 6 pm
+\item The number of insects found in a square foot of grassland
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Poisson notation}
+\begin{block}{}
+\[X \sim \f{Pois}(\lambda)\]
+\begin{itemize}
+\pause\item The random variable $X$ has a Poisson distribution with an mean rate of events of $\lambda$ (lambda).
+\pause\item The mean rate ($\lambda$) is scalable. That is, if $\lambda$ is the mean number of events per hour, $\f{Pois}(\lambda/2)$ models the number of events in a half hour interval.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Poisson probability and parameters}
+\begin{block}{}
+The probability of $x$ events in an interval,
+\[P(X=x) = \frac{e^{-\lambda}\lambda^x}{x!}\]
+\begin{itemize}
+\vspace*{-\baselineskip}\pause\item Mean: \[\E(X) = \mu = \lambda\]
+\vspace*{-\baselineskip}\pause\item Variance: \[\sigma^2 = \lambda\]
+\vspace*{-\baselineskip}\pause\item Standard deviation: \[\sigma = \sqrt \lambda \]
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Poisson probabilities in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Calculators $\to$ Poisson
+\item Enter the rate value $\lambda$ (``Mean")
+\item Select appropriate comparison symbol and numeric value
+\item Click ``Compute" if necessary
+\item Probability will be displayed
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Poisson, example}
+\begin{exampleblock}{Example}
+Paul fishes for an hour every morning. Over the past month (30 days) he has caught 62 fish. Paul is having friends over for dinner tonight, so he needs to catch 4 fish.\\
+\medskip
+What is the probability he catches 4 fish in an hour? Is that an unusually high number?
+\begin{itemize}
+\pause\item Assuming the chances of catching a fish are the same every day, the mean rate of fish caught is $\lambda = \frac {62}{30} = 2.07$
+\pause\item Probability of catching exactly 4 fish: $P(X=4) = 0.097$
+\pause\item Probability of catching four or more fish: $P(X \ge 4) = 0.156$
+\pause\item Rule of thumb boundary: $\mu = 2 \sigma = 2.07 + 2 \sqrt{2.07} = 4.95$ 
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}<handout:0>{Group work}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Work on question 3, all parts.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}

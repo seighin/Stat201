@@ -1,0 +1,114 @@
+---
+title: 'R Users Guide to Stat 201: Chapter 6'
+author: "Michael Shyne, 2017"
+
+header-includes:
+ - \usepackage{shyner}
+ - \usepackage{hyperref}
+
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Chapter 6: Normal Probability Distributions
+
+Chapter 6 continues with probability distributions, now focusing on continuous probability distributions. In particular, the uniform and normal distributions are examined, as well as sampling distributions. From an R perspective, these will be handled in a very similar manner to the discrete distributions.
+
+## Continuous uniform distribution
+
+R provides an analogous set of functions to handle uniform distributions as we saw previously with other distributions. They are `runif()`, `punif()`, etc. One difference to be aware of with continuous distributions is that we are no longer concerned with the difference between "less than" and "less than or equal to". Since $P(X=x) = 0$ for any $x$ in a continuous distribution, there is no difference between $P(X < x)$ and $P(X \le x)$.
+\smallskip
+```{r}
+# 10 random numbers (default range is (0,1))
+runif(10)
+
+# P(X < 2) in U(0,6)
+punif(2, min=0, max=6)
+
+# P(2 < X < 3.5) in U(0,6)
+punif(3.5, min=0, max=6) - punif(2, min=0, max=6)
+
+# Value x such that P(X > x) = .05 in U(-1,1)
+qunif(0.05, min=-1, max=1, lower=F)
+```
+
+## Normal distribution
+
+For normal distributions, we will use the functions `rnorm()`, `pnorm()`, etc. The parameters for a normal are the mean $\mu$ and standard deviation $\sigma$. The default values are 0 and 1 respectively. Thus, the normal distribution used, without supplying parameters, is the standard normal or $z$ distribution.
+\smallskip
+```{r}
+# 10 random numbers (default is standard normal N(0,1))
+rnorm(10)
+
+# P(X < 2) in N(3,4)
+pnorm(2, mean=3, sd=4)
+
+# P(2 < X < 3.5) in N(3,4)
+pnorm(3.5, mean=3, sd=4) - pnorm(2, mean=3, sd=4)
+
+# Value x such that P(X > x) = .05 in N(42,6)
+qnorm(0.05, mean=42, sd=6, lower=F)
+
+```
+
+## R density functions
+
+As mentioned in a previous guide, density functions for continuous variables (`dunif()`, `dnorm()`) have a slightly different meaning than for discrete variables. Recall, the probability of a single value in a continuous random variable is essentiallyy zero and probabilities of ranges of values are defined as the area under the density curve corresponding to the range. The density function then gives the height of the density curve for a single value, but that should not be interpretted as a probability. However, it can be used to plot density curves, as we did when we added a normal curve to a histogram. Here is an example of how it works.
+\smallskip
+```{r, fig.height=4}
+# define a sequence of x values for which we want to plot a desnity curve
+x <- seq(15, 30, length=1000)    # 1000 is the number of values in our sequence.
+                                 # It is many more than we need.
+
+# Find the curve height of a normal distribution for each x value
+norm.density <- dnorm(x, mean=20, sd= 5)    # Since we passed in a vector 
+                                            # of x value, we will get back
+                                            # a vector of density values
+
+plot(x, norm.density, type='l')    # type = l draws lines instead of points
+```
+
+## Samples
+
+In order to work with sampling distributions and the Central Limit Theorem, simply use the normal distribution functions with the appropriate mean and standard deviation ($\mu_{\bar x} = \mu$ and $\sigma_{\bar x} = \sigma/\sqrt n$).
+
+I created a demonstration of the Central Limit Theorem (https://seighin.shinyapps.io/clt_demo/) using Shiny, a simple framework for creating web apps running R code. A fuller discussion of Shiny is beyond the scope of these guides, but more information can be found at https://shiny.rstudio.com/.
+
+In order to create random samples from a population of values, I used the `sample()` command. Given a vector, `sample()` will return a random sample of that vector of specified size.
+\smallskip
+```{r}
+# Create a "population" of values
+x <- rnorm(1000)
+
+# Get a sample from the "population"
+sample(x, 5)
+```
+
+If `sample()` is given an integer ($n$) instead of a vector, it will create a sample from the range `1:n`. This can be used to generate a vector of indices for non-vector data such as data frames.
+\smallskip
+```{r}
+# Create a data frame
+df <- data.frame(x=1:10, x.sqr=(1:10)^2)
+df
+
+# Get a sample from integer list same length as data frame 
+sam.idx <- sample(nrow(df), 3)
+
+# These are index values
+sam.idx
+
+# Get sample from data frame
+df[sam.idx, ]
+```
+
+By default, the `sample()` function samples without replacement. Samples with replacement can be created using the optional parameter `replace=TRUE`. Also, since the samples are randomly generated, to create reproducible samples, be sure to set the random seed prior to calling the function.
+
+\vspace{2in}
+## License
+
+\includegraphics{cc_small}
+
+This document is distributed under a \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.

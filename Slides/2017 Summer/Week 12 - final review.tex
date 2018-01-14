@@ -1,0 +1,200 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Midterm Review]{Stat 201: Statistics I\\Midterm Review}
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date{August 7, 2017}
+
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{About the final exam}
+\begin{block}{}
+\begin{itemize}
+\item Available on MyStatLab following class on 8/7
+\item Due on 8/14 by 11 pm
+\item 19 questions, 100 points
+\begin{itemize}
+\item 6 questions, 16 points from chapters 3 - 6
+\item 13 questions, 84 points from chapters 7 - 11
+\end{itemize}
+\item Every question on exam has been a homework question, though the details will likely be different
+\item Estimated time to complete (median): 61 minutes, 16 seconds
+\item Time limit: 4 hours, must be completed in one sitting
+\item Can use any resource (book, notes, internet), except other people
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Chapter 3}
+\begin{block}{}
+\begin{itemize}
+\item From a set of data, find:
+\begin{itemize}
+\item Mean
+\item Median
+\item Mode
+\item Midrange
+\item Range
+\item Variance
+\item Standard deviation
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 4}
+\begin{block}{}
+\begin{itemize}
+\item Calculate probabilities:
+\begin{itemize}
+\item From proportions (3 in 12)
+\item From a 2 $\times$ 2 contingency table
+\item Complements
+\item \bt{Addition rule}
+\item \bt{Multiplication rule}
+\item Complex events ("At least one...")
+\item Conditional events
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 5}
+\begin{block}{}
+\begin{itemize}
+\item Find probability of event from a binomial distribution
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 6}
+\begin{block}{}
+\begin{itemize}
+\item Find probability from standard normal, $z$, distribution
+\item Find $z$-score which corresponds to given probability
+\item Find probability of event from a non-standard normal distribution
+\item Find value from non-standard normal distribution which corresponds to given probability
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 7}
+\begin{block}{}
+\begin{itemize}
+\item Estimate a populations proportion:
+\begin{itemize}
+\item Find a confidence interval 
+\item Find sample size for desired margin of error
+\begin{itemize}
+\item Known and unknown estimated proportion
+\end{itemize}
+\end{itemize}
+\item Estimate a population mean:
+\begin{itemize}
+\item Find a confidence interval 
+\item Find sample size for desired margin of error
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 8}
+\begin{block}{}
+\begin{itemize}
+\item Hypothesis testing:
+\begin{itemize}
+\item Identify the null and alternative hypotheses
+\item Calculate a test statistic and p-value
+\item Make a decision based on p-value and significance level
+\item State conclusion in terms of research question
+\end{itemize}
+\item Test a claim about population proportion
+\item Test a claim about population mean
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 9}
+\begin{block}{}
+\begin{itemize}
+\item Test a claim about two population proportions
+\item Test a claim about two population means using two independent samples
+\item Test a claim about the difference between populations using samples of paired data
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 10}
+\begin{block}{}
+\begin{itemize}
+\item Correlation:
+\begin{itemize}
+\item Identify linear correlation vs. non-linear correlation vs. no correlation
+\item Calculate correlation coefficient of a sample
+\item Test whether population correlation parameter $\rho$ is zero or not
+\end{itemize}
+\item Regression:
+\begin{itemize}
+\item Calculate regression equation from sample
+\item Make predictions for the response variable given a predictor value and regression results
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Chapter 11}
+\begin{block}{}
+\begin{itemize}
+\item Test the fit of a sample frequency distribution to an expected distribution
+\item Test independence of two factors using a sample contingency table
+
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+\end{document}

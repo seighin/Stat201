@@ -93,4 +93,4 @@ g <- g + labs(x="Month", y=expression(paste("FPM (", mu, "g/", m^3,")")),
               title="Time series of air pollution in MN")
 g
 
-ggsave('../images/grp02_Q3_c.png', width=4, height=2.5, units = "in")
+ggsave('../images/grp02_Q3_ca.png', width=4, height=2.5, units = "in")

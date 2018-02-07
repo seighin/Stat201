@@ -1,0 +1,174 @@
+\documentclass{article}
+
+\usepackage{shyne}
+
+% document format
+\topmargin 0in
+\oddsidemargin 0in
+\evensidemargin 0in
+\headheight 0in
+\headsep 0in
+\topskip 0in
+\textheight 9in
+\textwidth 6.5in
+\linespread{1.3}
+
+\begin{document}
+
+\begin{flushleft}
+\section*{Group Work - Chapter 4}
+\paragraph{1} Consider rolling a fair six-sided die.
+\begin{enumalpha}
+\item Let event $A$ be rolling an even number. What is a trial for this scenario? What is the sample space? Is $A$ a simple event? What is $P(A)$? What is $\bar A$, the complement of $A$? What is $P(\bar A)$? Is $A$ unlikely? Is $A$ unusual?\\
+\medskip
+\bt{Trial: One roll of the die\\
+Sample space: Roll is one of \{1, 2, 3, 4, 5, 6\} \\
+$\bv A$ is not a simple event. It is composed of the simple events of rolling 2, 4 or 6.}\\
+$\bv{ P(A) = \frac 3 6 = 0.5}$\\
+\bt{$\bv{\bar A}$ is the event of rolling an odd number (1, 3, 5).}\\
+$\bv{ P(\bar A) = \frac 3 6 = 0.5}$\\
+\bt{$\bv A$ is neither unlikely nor unusual.}
+
+\vspace{.5in}
+\item Let event $A$ be rolling an even number. Let event $B$ be rolling a 3. Are events $A$ and $B$ disjoint? What is $P(A \text{ or } B)$?\\
+\medskip
+\bt{Events $\bv A$ and $\bv B$ are disjoint. A roll can't be even and 3 at the same time.}\\
+\medskip $\ds \bv{P(A \text{\bt{ or }} B) = P(A) + P(B) =  \frac 3 6 + \frac 1 6 = \frac 4 6 = \frac 2 3 = 0.666\ldots}$
+\vspace{.5in}
+\item Consider rolling a die twice. Let event $A$ be getting an even number on the first roll. Let event $B$ be getting 5 or more on the second roll. Are events $A$ and $B$ independent? What is $P(A \text { and } B)$?\\
+\medskip
+\bt{Events $\bv A$ and $\bv B$ are independent. The outcome of the first roll has no effect on the outcome of the second roll.}\\
+\medskip $\ds \bv{P(A \text{\bt{ and }} B) = P(A) \times P(B) = \frac 3 6 \times \frac 2 6 = \frac {6}{36} = \frac 1 6 = 0.166\ldots}$
+\end{enumalpha}
+
+\newpage
+\paragraph{2} Consider a standard deck of playing cards... 52 cards, 4 suits of 13 cards each, 3 cards of each suit are face cards, 2 suits are black (clubs and spades) and 2 are red (hearts and diamonds).
+\begin{enumalpha}
+\item Let event $A$ be drawing a random card that is a diamond. What is a trial for this scenario? What is the sample space? Is $A$ a simple event? What is $P(A)$? What is $\bar A$, the complement of $A$? What is $P(\bar A)$? Is $A$ unlikely? Is $A$ unusual?\\
+\medskip
+\bt{Trial: The drawing of one card\\
+Sample space: The card drawn is one of the 52 cards in the deck \\
+$\bv A$ is not a simple event. It is composed of the simple events of drawing any one of the 13 diamonds.}\\
+$\bv{ P(A) = \frac {13}{52} = 0.25}$\\
+\bt{$\bv{\bar A}$ is the event of drawing one of the 39 cards that are not diamonds.}\\
+$\bv{ P(\bar A) = \frac{39}{52}  = 0.75}$\\
+\bt{$\bv A$ is neither unlikely nor unusual.}\\
+\bigskip \bt{Or if one only considers suit and ignores values of cards\ldots}\\
+\bigskip
+\bt{Trial: The drawing of one card\\
+Sample space: The card drawn is a club, spade, heart or diamond. \\
+$\bv A$ is a simple event. It can not be simplified if one is only considering suits of cards.}\\
+$\bv{ P(A) = \frac {1}{4} = 0.25}$\\
+\bt{$\bv{\bar A}$ is the event of drawing a club, spade or heart.}\\
+$\bv{ P(\bar A) = \frac{3}{4}  = 0.75}$\\
+\bt{$\bv A$ is neither unlikely nor unusual.}\\
+
+\vspace{.5in}
+\item Let event $A$ be drawing a random card that is a diamond. Let event $B$ be drawing a random card that is a face card. Are events $A$ and $B$ disjoint? What is $P(A \text{ or } B)$?\\
+\medskip
+\bt{Events $\bv A$ and $\bv B$ are not disjoint. A card can be both a diamond and a face card.}\\
+\medskip $\ds \bv{P(A \text{\bt{ or }} B) = P(A) + P(B) - P(A \btext{ and B)} =  \frac {13}{52} + \frac {12}{52} - \frac {3}{52} = \frac {22}{52} \approx 0.423}$
+\vspace{.5in}
+\newpage
+\item Consider drawing three cards. Let event $A$ be the first card is a heart. Let event $B$ be the second card is a club. Let event $C$ be the third card is black. Are events $A$, $B$ and $C$ independent? What is $P(A \text { and } B \text { and } C)$?\\
+\medskip
+\bt{Events $\bv A$, $\bv B$ and $\bv C$ are not independent. The drawing of each card affects the probabilities of each subsequent draw.}\\
+\bigskip
+$\ds \bv{P(A) = \frac {13}{52} = \frac 1 4, \qquad P(B \mid A) = \frac {13}{51}, \qquad P(C \mid A \btext{ and } B) = \frac {25}{50} = \frac 1 2}$\\
+\bigskip
+$\ds \bv{P(A \btext{ and } B \btext{ and } C) = P(A) \times P(B \mid A) \times P(C \mid A \btext{ and } B)}$\\
+\medskip
+$\ds \bv{ \qquad \qquad \qquad \qquad \qquad= \frac 1 4 \times \frac {13}{51} \times \frac 1 2 = \frac {13}{408} \approx 0.0319}$
+
+\end{enumalpha}
+
+\newpage
+\paragraph{3} The data set ``hair\_eye.csv" on D2L contains the hair and eye colors, as well as sex, of a sample of statistics students. Below is a table showing the distributions of students by eye color and gender.\\
+\medskip
+\renewcommand{\arraystretch}{1}
+{\centering
+\begin{tabular}{ r| c c c c | c}
+& \multicolumn{4}{c}{Eye color}\\
+Gender & Blue & Brown & Green & Hazel & Total\\
+\hline
+ Female &  114   &  122  &  31  &  46 & 313\\
+ Male   & 101  &  98  &  33  &  47 & 277\\
+ \hline
+ Total	& 215 & 220 & 64 & 93 & 592 
+\end{tabular}
+\par}
+\begin{enumalpha}
+\item Let event $A$ be a randomly selected student having green eyes. What is a trial for this scenario? What is the sample space? Is $A$ a simple event? What is $P(A)$? What is $\bar A$, the complement of $A$? What is $P(\bar A)$? Is $A$ unlikely? Is $A$ unusual?\\
+\medskip
+\bt{Like with the previous playing card example, there are two ways of treating this problem. We'll only consider the simpler here.\\}
+\medskip
+\bt{Trial: Selecting one student.\\
+Sample space: The student's eye color is blue, brown, green or hazel. \\
+$\bv A$ is a simple event.}\\
+$\bv{ P(A) = \frac {64}{592} \approx 0.108}$\\
+\bt{$\bv{\bar A}$ is the event of drawing one of the 39 cards that are not diamonds.}\\
+$\bv{ P(\bar A) = \frac{528}{592}  \approx 0.982}$\\
+\bt{$\bv A$ is somewhat unlikely, but not below 5\%. $\bv A$ is not unusual.}\\
+\vspace{.5in}
+
+\item Let event $A$ be a randomly selecting a student with brown or blue eyes. Let event $B$ be a randomly selecting a female student. Are events $A$ and $B$ disjoint? What is $P(A \text{ or } B)$?\\
+\medskip
+\bt{Events $\bv A$ and $\bv B$ are not disjoint. A student can both have brown or blue eyes and be female.}\\
+\medskip $\ds \bv{P(A \text{\bt{ or }} B) = P(A) + P(B) - P(A \btext{ and B)} }$\\
+\medskip $\ds \bv{\qquad \qquad \qquad =  \frac {215 + 220}{592} + \frac {313}{592} - \frac {114+122}{592} = \frac {512}{592} \approx 0.865}$
+\vspace{.5in}
+
+\item Consider randomly selecting two students. Let event $A$ be the first student has blue eyes. Let event $B$ be the second student has hazel eyes. Are events $A$ and $B$ independent? What is $P(A \text { and } B)$?\\
+\medskip
+\bt{Events $\bv A$ and $\bv B$ are technically not independent, because the sample size (2) is less than 5\% of the population (592), we can treat them as independent. }\\
+\bigskip
+$\ds \bv{P(A \btext{ and } B) = P(A) \times P(B) = \frac {215}{592} \times \frac {93}{592} = \frac {19995}{350464} \approx 0.0571}$
+
+\end{enumalpha}
+
+\newpage
+\paragraph{4} The table below is the distribution of students from the ``hair\_eye.csv" data set by eye color and hair color.\\
+\medskip
+\renewcommand{\arraystretch}{1}
+{\centering
+\begin{tabular}{ r| c c c c | c}
+& \multicolumn{4}{c}{Eye color}\\
+Hair color & Blue & Brown & Green & Hazel & Total\\
+\hline
+  Black &  20  &  68  &   5  &  15 & 108\\
+ Blond  & 94   &  7  &  16  &  10 & 127\\
+ Brown &  84  & 119  &  29  &  54 & 286\\
+ Red   &  17  &  26  &  14  &  14 & 71\\
+ \hline
+Total	& 215 & 220 & 64 & 93 & 592 
+\end{tabular}
+\par}
+
+\begin{enumalpha}
+\item Suppose 5 students are randomly selected. What is the probability that at least one of them has red hair?\\
+\medskip
+\bt{$\bv{P(A)}$ = At least one selected student has red hair}\\
+\bt{$\bv{P(\bar A)}$ = No selected student has red hair = All selected students have not-red hair}\\
+\medskip$\ds \bv{P(\btext{student has not-red hair}) = \frac {108 + 127 + 286}{592} = \frac {521}{592} \approx 0.880}$\\
+\medskip$\ds \bv{P(\bar A) \approx (0.880)^5 \approx 0.528}$\\
+\medskip$\ds \bv{P(A) = 1-P(\bar A) \approx 1 - 0.528 = 0.472}$
+\vspace{.5in}
+
+\item Suppose one student is selected randomly. Assuming the student has black hair, what is the probability the student has brown eyes? Is having brown eyes independent of having black hair?\\
+\medskip
+\bt{Let $\bv A$ be the event a randomly selected student has black hair and $\bv B$ be the event a randomly selected student has brown eyes,}\\
+\medskip$\ds \bv{P(B \mid A) = \frac{68}{108} \approx 0.630} \qquad \bv{P(B) = \frac {220}{592} \approx 0.372}$\\
+\medskip$\bv{P(B) \ne P(B \mid A)}$\bt{, so having brown eyes is not independent of having black hair.}
+\vspace{.5in}
+
+\item Repeat part (b), but assume the student has brown hair.\\
+\medskip
+\bt{Let $\bv A$ be the event a randomly selected student has brown hair and $\bv B$ be the event a randomly selected student has brown eyes,}\\
+\medskip$\ds \bv{P(B \mid A) = \frac{119}{286} \approx 0.416} \qquad \bv{P(B) \approx 0.372}$\\
+\medskip\bt{While $\bv{P(B)$ is not exectly equal to $P(B \mid A)}$, they are close. The difference could be a result of sampling variation. Having brown eyes might be independent of having brown hair.}
+
+\end{enumalpha}
+
+
+\end{flushleft}
+\end{document}

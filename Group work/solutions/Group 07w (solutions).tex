@@ -1,0 +1,85 @@
+\documentclass{article}
+
+\usepackage{shyne}
+
+% document format
+\topmargin 0in
+\oddsidemargin 0in
+\evensidemargin 0in
+\headheight 0in
+\headsep 0in
+\topskip 0in
+\textheight 9in
+\textwidth 6.5in
+\linespread{1.3}
+
+\begin{document}
+
+\begin{flushleft}
+\section*{Group Work - Chapter 7}
+\paragraph{1} Suppose is in known that 45\% of the general population believes that correlation implies causation.
+\begin{enumalpha}
+\item A survey taken of 60 students after completing a statistics course finds that 32\% of them believe that correlation implies causation. Find a 95\% confidence interval of the population proportion of students who have completed a statistics course who believe that correlation implies causation. Write it in both interval notation, $(L, U)$ or $L < p < U$, and in $\hat p \pm ME$ notation.\\
+\medskip
+\bt{32\% of 60 is }$\bv{0.32 \times 60 = 19.2 \implies 19}$\\
+\medskip
+\bt{Using StatCrunch (Proportion Stats $\to$ One Sample $\to$ With Summary) to find 95\% confidence interval for 19 successes out of 60 observations:}\\
+\medskip
+$\bv{L = 0.199,\, U=0.434, \qquad \hat p= .3167,}\ds\qquad \bv{ME = \frac{U - L}{2} = \frac{0.434 - 0.199}{2} = 0.1175}$\\
+\bigskip
+\bt{95\% confidence inteval = }\\$\bv{(0.199, 0.434)}$\bt{ or }$\bv{0.199 < p < 0.434}$\\$\bv{0.3167 \pm 0.1175}$\\
+\vspace{0.5in}
+
+\item Is the proportion of students who have completed a statistics course who believe that correlation implies causation different than the general population at a $\alpha = 0.05$ significance level? Did the statistics courses cause the difference, if it exists?\\
+\medskip
+\bt{The 95\% confidence interval does not contain the population value of 0.45. Thus, at a $\bv{\alpha=0.05}$ level, we have evidence that the statistics students are different from the general population in this regard.}\\
+\medskip
+\bt{No! We do not have evidence that the statistics course caused the difference. Correlation is not causation.}
+
+\vspace{.5in}
+\item If we wanted to known the population proportion of students who have completed a statistics course who believe that correlation implies causation within plus/minus 3\% with 90\% confidence, what sample size would be needed for a survey? Calculate with both unknown sample proportion and with proportion found in the earlier survey in part (a).\\
+\medskip
+\bt{In StatCrunch (Proportion Stats $\to$ One Sample $\to$ Width/Sample Size):}\\
+\bt{Confidence level = 0.9, width = 0.06}\\
+\smallskip
+\bt{Target proportion (unknown) = 0.5 :}\qquad$\bv{n=752}$\\
+\bt{Target proportion (survey) = 0.3167 :}\qquad$\bv{n=651}$
+\end{enumalpha}
+
+
+
+\newpage
+\paragraph{2} Suppose winter daily maximum temperatures in Minnesota are known to be normally distributed with a standard deviation 12.5 \textdegree F. 
+\begin{enumalpha}
+\item A random sample of 16 winter day maximum temperatures has a sample mean of  14.3 \textdegree F. What is 90\% confidence interval for the population mean maximum temperature? Write it in both interval notation, $(L, U)$ or $L < \mu < U$, and in $\bar x \pm ME$ notation. \\
+\medskip
+\bt{Using StatCrunch (Z Stats $\to$ One Sample $\to$ With Summary) to find 90\% confidence interval for mean 14.3, standard deviation 12.5 and sample size 16:}\\
+\medskip
+$\bv{L = 9.16,\, U=19.44, \qquad \bar x = 14.3,}\ds\qquad \bv{ME = \frac{U - L}{2} = \frac{19.44 - 9.16}{2} = 5.14}$\\
+\bigskip
+\bt{90\% confidence inteval = }\\$\bv{(9.16, 19.44)}$\bt{ or }$\bv{9.16 < \mu < 19.44}$\\$\bv{14.3 \pm 5.14}$\\
+
+\vspace{.5in}
+
+\item Suppose the file ``max\_temps\_dec17.csv" represents a random sample of max temperatures in December. What is a 99\% confidence interval based on this sample? (Don't have to write both forms.) Is the mean maximum December temperature different than the mean max winter temperature (as found in part (a)) at a significance level of $\alpha = 0.01$?\\
+\medskip
+\bt{Using StatCrunch (T Stats $\to$ One Sample $\to$ With Data):}\\
+\medskip
+$\bv{99\% \, CI = (16.79,\, 32.50)}$\\
+\medskip
+\bt{The 99\% confidence interval does not contain the previous estimated mean of 14.3. Thus, at a $\bv{\alpha=0.01}$ level, we have evidence that the December temperatures are different from the general winter temperatures.}\\
+\vspace{.5in}
+
+\item If we wanted to find the mean winter maximum temperature within plus/minus 1.5 \textdegree F with 95\% confidence, how many days would need to be sampled?\\
+\medskip
+\bt{In StatCrunch (Z Stats $\to$ One Sample $\to$ Width/Sample Size):}\\
+\bt{Confidence level = 0.95, width = 3, Std. dev. = 12.5:}\\
+\medskip
+$\bv{n=267}$\\
+
+\end{enumalpha}
+
+
+
+\end{flushleft}
+\end{document}

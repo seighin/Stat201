@@ -1,0 +1,98 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Chapter 1]{Stat 201: Statistics I\\Presentation Assignment }
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[]{
+\\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
+
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Presentations}
+\begin{block}{}
+\large
+Students will make a presentation analyzing the statistical content of a recent news item.
+\begin{itemize}
+\item Students may work alone or in pairs.
+\item Presentations should be short ($\sim$ 5 minutes).
+\item Slides can be used, but not required.
+\item News items should be recent (published within the last year).
+\item News item may be from virtually any real news or information source (no Onion articles please). Check with instructor if there are any questions.
+\item Link to or copy of news item to be analyzed must be provided to the instructor at least a week before presentations are made.
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Content}
+\begin{block}{}
+The content of the analysis will vary depending on the content of the news item. Here are some questions to consider:
+\begin{itemize}
+\item What are the statistics being reported (proportions, means, etc.)?
+\item What is the population being studied? How were samples created?
+\item What is the source of the statistics? Is there a potential for bias?
+\item Do the results have statistical significance? Practical significance?
+\item Are effect sizes (confidence intervals) reported? Are results of statistical tests (p values) reported?
+\item Does the headline of the news item seem to reflect the statistical content?
+\item Does the news item draw reasonable conclusions from the statistics?
+\item Are there reasons to be suspicious of the statistics or the reporting? (Think back to issues we talked about in Chapter 1.)
+\item Does the news item make it easy to find the original source?
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Extra analysis}
+\begin{block}{}
+\large
+Sometimes the original source of the statistical content can be found. Metro State students have access to many journal article reporting original research through the library. While analyzing journal articles is beyond the scope of this class, much can be learned by reading only the abstract. Further questions can then be considered:
+\begin{itemize}
+\item Does the news item come to the same conclusion as the researchers?
+\item Is the news item about what the researchers considered to be most important?
+\item What information from the original source would have been important to include in the news item?
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}

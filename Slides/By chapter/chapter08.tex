@@ -26,7 +26,7 @@
 
 \AtBeginSubsection[]
 { 	\begin{frame}{}
-Frequ 
+
 	{
 	\usebeamerfont{frametitle}
 	\begin{beamercolorbox}
@@ -42,7 +42,7 @@ Frequ
 \title[Chapter 8]{Stat 201: Statistics I\\ Chapter 8 }
 \author[M. Shyne]{}
 \institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
-\date[date]{date
+\date[5/9/2018]{date
 \\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
 
 
@@ -397,11 +397,28 @@ $H_0$ is not true & Correct decision & Type II error ($\beta$)
 \begin{frame}{Analogy to legal system}
 \begin{block}{}
 \large
-One way to think about how hypothesis tests work is to compare them to our legal system:
+It can be useful to use a legal system analogy to help understand how hypothesis tests work.\\
+\medskip
+Consider a criminal trial:
 \begin{itemize}
-\item A criminal defendant is ``presumed innocent" until proven guilty. This is equivalent to the null hypothesis. We start with an assumption that there is nothing interesting about our sample.
-\item The standard of evidence for criminal trials is ``beyond a reasonable doubt". The significance level ($\alpha$ value) defines what is reasonable doubt in an hypothesis test, how unlikely a sample must be to question the null hypothesis.
-\item If there is sufficient evidence, the jury will find a defendant guilty. In other words, if a jury finds that it is unlikely that the evidence that is presented would exist if the defendant was innocent, it rejects the presumption of innocence.    
+\pause\item A criminal defendant enters a trial with the \bt{presumption of innocence}. A defendant is assumed innocent until proven guilty.
+\pause\item A prosecutor presents \bt{evidence} to show that the defendant should be considered guilty.
+\pause\item The jury considers whether the evidence, when judged against a particular standard (\bt{beyond a reasonable doubt}), is sufficient to abandon the presumption of innocence.
+\pause\item The jury returns a \bt{verdict}: either guilty or not guilty. A defendant is generally not declared innocent.   
+\pause\item A jury can make two kinds of mistakes: they can convict an innocent defendant or they can fail to convict a guilty defendant.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Analogy to legal system, cont.}
+\begin{block}{}
+\large
+\begin{itemize}
+\item The presumption of innocence is comparable to the \bt{null hypothesis}. An hypothesis tests is entered assuming that there is nothing interesting about the population(s) being studied.
+\pause\item The evidence is comparable to the \bt{sample} collected to answer the research the question.
+\pause\item The ``beyond a reasonable doubt" standard is comparable to the \bt{significance level} or $\bv \alpha$ of the test.
+\pause\item The verdict is comparable to the \bt{conclusion} of the test: either to reject the null or to fail to reject the null. The null is never accepted or proven.
+\pause\item A conclusion can be in error one of two ways: a type I error (convict an innocent defendant) or a type II error (fail to convict a guilty defendant).
 \end{itemize}
 \end{block}
 \end{frame}

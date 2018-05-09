@@ -42,7 +42,8 @@
 \title[Chapter 9]{Stat 201: Statistics I\\ Chapter 9 }
 \author[M. Shyne]{}
 \institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
-\date{date}
+\date[5/9/2018]{date
+\\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
 
 
 \begin{document}
@@ -288,11 +289,11 @@ As before, z-scores and p-values can be found using technology.
 \large
 A school district in an effort to reduce the number of teen drivers who text or email while driving creates an education program that half the high school students in the district attend. Two months after the program, the district surveys a random sample of teen drivers. The survey finds that 62 out of 212 teens surveyed who had attended the program (population 1) had texted or emailed while driving during the previous month, while among those that did not attend the program (population 2), 59 out of 173 did so.\\
 \medskip
-Test whether the program was successful at a 0.05 level of significance.
+Test whether the program had an effect at 0.05 level of significance.
 \begin{enumerate}
 \pause\item Identify null and alternative hypotheses from research question\\
 \pause$H_0: p_1 = p_2$ or $H_0: p_1 - p_2 = 0$\\
-$H_a: p_1 < p_2$ or $H_a: p_1 - p_2 < 0$\\
+$H_a: p_1 \ne p_2$ or $H_a: p_1 - p_2 \ne 0$\\
 \end{enumerate}
 \end{exampleblock}
 \end{frame}
@@ -311,7 +312,7 @@ $H_a: p_1 < p_2$ or $H_a: p_1 - p_2 < 0$\\
 \pause\item Calculate $z$ test statistic\\
 \pause$z = -1.0215331$
 \pause\item Calculate p-value\\
-\pause$p = 0.1535$
+\pause$p = 0.307$
 \end{enumerate}
 \end{exampleblock}
 \end{frame}
@@ -322,10 +323,12 @@ $H_a: p_1 < p_2$ or $H_a: p_1 - p_2 < 0$\\
 \begin{enumerate}
 \setcounter{enumi}{4}
 \item Compare p-value to significance level $\alpha$ and report decision\\
-\pause$p = 0.1535 > \alpha =0.05$. Fail to reject null hypothesis.
+\pause$p = 0.307 > \alpha =0.05$. Fail to reject null hypothesis.
 
 \pause\item State conclusion in terms of original research question\\
-\pause There is not evidence that teen drivers who attended the program text and email while driving at a lower rate than those who did not attend.
+\pause There is not evidence that teen drivers who attended the program text and email while driving at a different rate than those who did not attend.\\
+{\centering or \par}\smallskip
+There is not evidence that the education program changed the rates of teen drivers texting or emailing while driving.
 \end{enumerate}
 
 \end{exampleblock}
@@ -334,12 +337,12 @@ $H_a: p_1 < p_2$ or $H_a: p_1 - p_2 < 0$\\
 \begin{frame}{Confidence interval for two means, example}
 \begin{exampleblock}{Example}
 \large
-A ($1-2\alpha$)\%, or 90\%, confidence interval for $p_1 - p_2$ is\\
+A ($1-\alpha$)\%, or 95\%, confidence interval for $p_1 - p_2$ is\\
 \pause\medskip
-{\centering $\ds CI_{0.90} = (-0.127, \, 0.0299)$ \par}
+{\centering $\ds CI_{0.95} = (-0.142, \, 0.045)$ \par}
 \medskip
 
-\pause Since zero is in the interval, there is not evidence that $p_1 - p_2 > 0$ or that teen drivers who attended the program text and email while driving at a lower rate than those who did not attend.
+\pause Since zero is in the interval, there is not evidence that $p_1 - p_2 \ne 0$ or that teen drivers who attended the program text and email while driving at a different rate than those who did not attend.
 
 \end{exampleblock}
 \end{frame}

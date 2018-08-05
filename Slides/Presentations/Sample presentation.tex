@@ -1,0 +1,59 @@
+\documentclass{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+
+\title[Short title]{Sample Analysis Presentation}
+\author[M. Shyne]{\Large Michael Shyne}
+\date{July 10, 2018}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{News Item}
+{\centering 
+\bt{\large Poliovirus treatment helped patients\\ with deadly brain tumors live longer}\\
+\medskip
+from: \bt{Science News} (June 26, 2018)\\
+\smallskip
+(\href{https://www.sciencenews.org/article/poliovirus-treatment-helped-patients-deadly-brain-tumors-live-longer}{https://www.sciencenews.org/article/poliovirus-treatment-helped-patients-deadly-brain-tumors-live-longer})\\
+\par}
+\end{frame}
+
+\begin{frame}{Context and statistics}
+\begin{quote}
+``Few treatment options are available to people facing a second battle with a particularly fatal type of brain tumor called glioblastoma." 
+\end{quote}
+\begin{quote}
+``Of 61 people with recurring glioblastoma who were treated with the modified [polio] virus, 21 percent were alive after three years. In a “historical” comparison group of 104 patients, who would have been eligible for the treatment but died before it was available, 4 percent lived as long,"
+\end{quote}
+\end{frame}
+
+\begin{frame}{Quality of Source}
+\begin{itemize}
+\item Sciencenews.org is website for \emph{Science News} magazine, which is a reputable news source
+\item Original source is study published in \emph{New England Journal of Medicine}, one of the most prestegious medical journals in the world
+\item Study authors are all researchers at Duke University which is a respected academic institution
+\item No reason to suspect bias
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comments}
+\begin{itemize}
+\item Statistics are two proportions (\% survival at 36 months)
+\item No information on statistical significance in news article (no p-value, no confidence intervals)
+\item Original study paper does report confidence intervals, difference is statistically significance
+\item Not a true controlled trial (used historical controls)
+\item Disease population, no information on how sample was created (probably not a random sample)
+\item Article title is a fair summary of content
+\item Article includes link to original source
+\end{itemize}
+\end{frame}
+
+\end{document}

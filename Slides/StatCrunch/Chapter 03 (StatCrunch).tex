@@ -1,0 +1,151 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Chapter 3]{Stat 201: Statistics I\\ StatCrunch: Chapter 3 }
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[8/5/2018]{
+\\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
+
+
+
+\begin{document}
+\frame{\titlepage}
+
+% Chapter 3
+\setcounter{section}{2}
+\section{Statistics for Describing, Exploring, and Combining Data}
+
+% Section 3.1
+\subsection{Measures of Center}
+
+
+\begin{frame}{Measures of center in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Summary Stats $\to$ Columns
+\item Select the column (or columns) which contains the data
+\item Under ``Statistics" select statistics to calculate (ctrl-click to select multiple statistics)
+\item For measures of center select ``Mean:, ``Median", ``Min", ``Max" and ``Mode"
+\item Click ``Compute!"
+\item Mean, median and mode will be displayed
+\item Midrange must be calculated by hand using min and max
+\end{itemize}
+\end{block}
+
+\begin{alertblock}{Note}
+Mode will display ``No mode", ``Multiple modes" or the mode if exactly one exists. If there are multiple modes, you must identify them yourself.
+\end{alertblock}
+\end{frame}
+
+
+
+% Section 3.2
+\subsection{Measures of Variation}
+
+
+\begin{frame}{Measures of variation in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Summary Stats $\to$ Columns
+\item Select the column (or columns) which contains the data
+\item Under ``Statistics" select statistics to calculate (ctrl-click to select multiple statistics)
+\item For measures of variation select ``Variance", ``Std. Dev." and ``Range"
+\item Click ``Compute!"
+\item The statistics will be displayed
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+% Section 3.3
+\subsection{Measures of Relative Standing and Boxplots}
+
+\begin{frame}{Percentiles in StatCrunch}
+\begin{block}{}
+To find percentile of value $x$:
+\begin{itemize}
+\item If data is not ordered, order it using Data $\to$ Sort
+\item The row number of the value \bt{before} $x$ is number of values $< x$
+\item The row number of the last value is $n$
+\item Use the formula to calculate percentile (round up)
+\end{itemize}
+To find value for percentile $p$:
+\begin{itemize}
+\item Stat $\to$ Summary Stats $\to$ Columns
+\item Select the column (or columns) which contains the data
+\item Under ``Percentiles..." enter $p$ (can enter multiple $p$'s separated by commas)
+\item Click ``Compute!"
+\item The value(s) will be displayed as ``$p$th Per."
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Five number summaries in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Summary Stats $\to$ Columns
+\item Select the column (or columns) which contains the data
+\item Under ``Statistics" select ``Min", ``Q1", ``Median", ``Q3" and ``Max"
+\item Or, under ``Percentile" enter ``1, 25, 50, 75, 99" (might not give correct values for the min and max in large data sets)
+\item Click ``Compute!"
+\item The values will be displayed, but maybe not in the right order
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Boxplots in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Graph $\to$ Boxplot
+\item Select the column (or columns) which contains the data
+\item (Optional) Under ``Other options", click ``Draw boxes horizontally"
+\item Click ``Compute!"
+\item Hold pointer over plot to get IQR (inter-quartile range) and five number summary
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\end{document}

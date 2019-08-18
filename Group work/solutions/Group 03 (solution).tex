@@ -15,143 +15,136 @@
 
 \begin{document}
 
+
 \begin{flushleft}
-\section*{Group Work - Chapter 3}
-\paragraph{1} The file ``max\_temp\_dec17.csv" on D2L contains the daily high temperatures (in F) for December. 
+\section*{Group Work - Chapter 2}
+\paragraph{1} The high temperatures in Saint Paul for each day in December are below. The data can also be found on D2L as ``max\_temps\_dec17.csv". Use classes -9 to 0, 1 to 10, 11 to 20 etc. 
+\[51 ,\, 46 ,\, 49 ,\, 57 ,\, 27 ,\, 19 ,\, 22 ,\, 31 ,\, 27 ,\, 29 ,\, 35 ,\, 24 ,\, 29 ,\, 24 ,\, 29 ,\, 30 ,\, 28 ,\, 42 ,\, 38 ,\, 23 ,\, 24 ,\, 25 ,\, 22 ,\, 22  ,\, 3  ,\, 0  ,\, 4 ,\, 11  ,\, 7 ,\, -6 ,\, -8\]
 \begin{itemize}
-\item [(a)] Find the mean, median, mode and midrange of the sample. What is the most appropriate measure of center for this data?\\
-
+\item [(a)] Build a frequency table of the data. Do the data appear to have a normal distribution? Are there outliers? Add relative frequency and cumulative frequency tables.\\
 \bigskip
+\bt{The distribution does seem to be approximately normal by our current definition. There do not appear to be any outliers.}\\
+\bigskip
+
 {\centering
-\begin{tabular}{cccc}
-Mean & Median & Mode & Midrange \\ 
+\begin{tabular}{rrrr}
   \hline
-24.65 &  25 & 22, 24, 29 & 24.50 \\ 
-\end{tabular}
-\par}
-\bigskip
-\bt{Since temperatures are roughly normal and symmetric, mean is the most appropriate measure of center.}
+ & Freq & Rel & Cum \\ 
+  \hline
+(-10,0] & 3 & 0.0968 & 3 \\ 
+  (0,10] & 3 & 0.0968 & 6 \\ 
+  (10,20] & 2 & 0.0645 & 8 \\ 
+  (20,30] & 15 & 0.4839 & 23 \\ 
+  (30,40] & 3 & 0.0968 & 26 \\ 
+  (40,50] & 3 & 0.0968 & 29 \\ 
+  (50,60] & 2 & 0.0645 & 31 \\ 
+   \hline
+\end{tabular}\par}
 \vspace{.5in}
-\item[(b)] Find the range, variance and standard deviation of the sample. Be sure to include the correct units for each measure.\\
-
+\item[(b)] Sketch a histogram of the data. Does the histogram show a normal distribution? If not, which characteristic of normal distributions does it violate?\\
 \bigskip
+\bt{The histogram appears approximately normal.}
+\bigskip
+
 {\centering
-\begin{tabular}{ccc}
- Range & Variance & SD \\ 
-  \hline
- 65 \textdegree F & 252.90 (\textdegree F)$^2$ & 15.90 \textdegree F \\ 
-\end{tabular}
+\includegraphics[width=4in]{images/grp02_Q1_b}
 \par}
-
-\vspace{.5in}
-\item[(c)] Within the data set, what percentile is 45 degrees? What temperature is the 10th percentile?\\
-
-\bigskip
-\bt{46 \textdegree F is the 88th percentile.\\
-The 10th percentile is 3 \textdegree F.}
 \end{itemize}
 
 
 
 \newpage
-\paragraph{2} The file ``mpls\_home\_sales.csv" on D2L contains the adjusted sale prices (in dollars) of a sample of home sold in Minneapolis in 2016. 
+\paragraph{2} The maximum monthly fine particulate matter pollution in Minnesota from 2007 to 2009 is below. The data can be found on D2L as ``max\_air\_pol.csv". Use classes 10-15, 15-20, 20-25, etc. 
+
+\[  25.82 ,\,  28.87 ,\, 36.18 ,\, 21.22 ,\, 25.94 ,\, 25.10 ,\, 24.49 ,\, 36.94 ,\, 23.20 ,\, 25.72 ,\, 27.94 ,\, 43.34 \] 
+\[31.46 ,\, 38.32 ,\, 24.82 ,\, 22.78 ,\, 28.48 ,\, 24.27 ,\, 24.26 ,\, 15.52 ,\, 22.88 ,\, 15.95 ,\, 14.48 ,\, 23.83 \]
+\[ 28.72 ,\, 25.87 ,\, 22.38 ,\, 21.21 ,\, 19.90 ,\, 32.25 ,\, 24.69 ,\, 23.14 ,\, 23.81 ,\, 17.05 ,\, 24.09 ,\, 49.88 \]
 \begin{itemize}
-\item [(a)] Find the mean, median, mode and midrange of the sample. What is the most appropriate measure of center for this data?\\
-
+\item [(a)] Build a frequency table of the data. Does the data appear to have a normal distribution? Add relative frequency and cumulative frequency tables.\\
 \bigskip
+\bt{The distribution does not seem to be normal. The distribution is not symmetric There do not appear to be any outliers.}\\
+\bigskip
+
 {\centering
-\begin{tabular}{cccc}
-Mean & Median & Mode & Midrange \\ 
+\begin{tabular}{rrrr}
   \hline
-234980.59 & 202750.00 & 175000 & 451000.00 \\ 
+ & Freq & Rel & Cum \\ 
+  \hline
+(10,15] & 1 & 0.0278 & 1 \\ 
+  (15,20] & 4 & 0.1111 & 5 \\ 
+  (20,25] & 15 & 0.4167 & 20 \\ 
+  (25,30] & 9 & 0.2500 & 29 \\ 
+  (30,35] & 2 & 0.0556 & 31 \\ 
+  (35,40] & 3 & 0.0833 & 34 \\ 
+  (40,45] & 1 & 0.0278 & 35 \\ 
+  (45,50] & 1 & 0.0278 & 36 \\ 
+   \hline
 \end{tabular}
 \par}
-\bigskip
-\bt{By looking at the histogram, we can see that the data is right skewed with a few extremely high values. Thus, median is the most appropriate measure of center.}
 
-\bigskip
-{\centering
-\includegraphics[width=4in]{images/grp03_Q2_a}
-\par}
 
 \vspace{.5in}
-\item[(b)] Find the range, variance and standard deviation of the sample. Be sure to include the correct units for each measure.\\
-
+\item[(b)] Sketch a histogram of the data. Does the histogram show a normal distribution? If not, which characteristic of normal distributions does it violate?\\
 \bigskip
-{\centering
-\begin{tabular}{ccc}
-Range & Variance & SD \\ 
-  \hline
-898000 \$ & 21434941764.24 \$$^2$ & 146406.77 \$ \\ 
-\end{tabular}
-\par}
-\vspace{.5in}
-
-\newpage
-\item[(c)] Find the 5 number summary of the sample and create a boxplot. What does the boxplot tell you about the distribution of the data.\\
-
+\bt{The histogram does not appear to be normal. It is not symmetric. It is skewed to the right.}
 \bigskip
+
 {\centering
-\begin{tabular}{ccccc}
-Min & Q1 & Med & Q3 & Max \\ 
-  \hline
-2000.00 & 161250.00 & 202750.00 & 286225.00 & 900000.00 \\ 
-\end{tabular}
+\includegraphics[width=4in]{images/grp02_Q2_b}
 \par}
 
-\bigskip
-{\centering
-\includegraphics[width=4in]{images/grp03_Q2_c}
-\par}
-
-\bigskip
-\bt{Like the histogram, the boxplot shows a heavily right skewed distribution.}
 \end{itemize}
 
+
 \newpage
-\paragraph{3} The file ``heights.csv" on D2L contains simulated heights (in inches) of 25 men and 25 women in a statistics class. 
+\paragraph{3} For each scenario below, identify some of the graphs that would be appropriate for this data. Create one appropriate graph and use it to answer the research question.
+
 \begin{itemize}
-\item [(a)] Find the mean and median of both samples. What is the most appropriate measure of center for this data?\\
-
+\item [(a)] The data set ``faithful.csv" contains a sample of eruptions of the Old Faithful geyser in Yellowstone National Park. Length of eruption (in minutes) and waiting time until the next eruption (in minutes) are recorded. Researchers want to know if the is a relationship between eruption lengths and waiting times.\\
 \bigskip
+\bt{Because the question concerns the relationship between two quantitative variables, a scatterplot is most appropriate. }
+\bigskip
+
 {\centering
-\begin{tabular}{ccc}
- & Mean & Median \\ 
-  \hline
-men & 70.24 & 70.30 \\ 
-  women & 63.29 & 63.70 \\ 
-\end{tabular}
+\includegraphics[width=4in]{images/grp02_Q3_a}
 \par}
 
 \bigskip
-\bt{We expect heights to be approximately normal, so mean is the most appropriate measure of center.}
-\vspace{.5in}
+\bt{There does seem to be a relationship between length of eruption and waiting time for next eruption.}
 
-\item[(b)] Find standard deviation of both samples.\\
 
+\newpage
+
+
+\item[(b)] The data set ``hair\_eye.csv" contains the hair and eye color of 592 statistics students. The math department would like to know what is the most common eye color. What is the least common eye color?\\
 \bigskip
+\bt{Any graph that displays counts of categorical data could be used, such as pie charts or bar graphs. However, since we want to know the most and least common eye colors, a Pareto chart would be best. }
+\bigskip
+
 {\centering
-\begin{tabular}{cc}
- & SD \\ 
-  \hline
-men & 5.04 in \\ 
-  women & 5.28 in \\ 
-\end{tabular}
+\includegraphics[width=4in]{images/grp02_Q3_b}
 \par}
+
+\bigskip
+\bt{The most common eye color is brown and the least common is green.}
+
+\vspace{.25in}
+
+\item[(c)] The data set ``max\_air\_pol.csv" contains the monthly maximum fine matter particulate air pollution from 2007 to 2009. Researchers would like to know if there is a pattern in air pollution over time.\\
+
+\bigskip
+\bt{A time series is most appropriate for examining trends over time. }
+\bigskip
+
+{\centering
+\includegraphics[width=4in]{images/grp02_Q3_c}
+\par}
+
+\bigskip
+\bt{There appears to be a trend of slightly decreasing air pollution. The last value might be an outlier. }
+
 \vspace{.5in}
 
-
-\item[(c)] Suppose two new students join the class. One is a woman who is 71 inches tall and one is a man who is 74 inches tall. Calculate z-scores for both. Who is taller for their gender? Are either of them unusually tall?\\
-
-\bigskip
-
-$\bv{\ds z = \frac{x - \bar x}{s}}$\\
-\medskip
-$\ds \bv{ z_w = \frac {71-63.29}{5.28} = 1.46 }$\\
-\medskip
-$\ds \bv{ z_m = \frac {74 - 70.24}{5.04} = 0.75}$\\
-\bigskip
-\bt{The woman has a higher z-score, so she is taller for her gender than the man is. Neither z-score is greater than 2, so neither new student has an unusual height.}
 \end{itemize}
 
 

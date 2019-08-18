@@ -1,0 +1,124 @@
+\documentclass[]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Chapter 2]{Stat 201: Statistics I\\ StatCrunch: Chapter 2}
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[5/9/2018]{
+\\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
+  
+
+\begin{document}
+
+\frame{\titlepage}
+
+% Chapter 2
+\setcounter{section}{1}
+\section{Summarizing and Graphing Data}
+
+
+% Section 2.2
+\setcounter{subsection}{1}
+\subsection{Histograms}
+
+
+\begin{frame}{Histograms in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Graph $\to$ Histogram
+\item Select column that contains data for histogram
+\item Optional: Select type of histogram. This will adjust y-axis scale.
+\item Optional: Set ``Bin: Width". This will determine number of bars displayed.
+\item Click ``Compute!"
+\end{itemize}
+\end{block}
+
+\begin{alertblock}{Note}
+StatCrunch expects raw data for generating histograms. It won't work with data in frequency tables. To approximate a histogram using a frequency table, use a bar graph (see next section).
+\end{alertblock}
+\end{frame}
+
+
+% Section 2.3
+\subsection{Graphs that Enlighten and Graphs that Deceive}
+
+
+\begin{frame}{Graphs in StatCrunch}
+\begin{block}{Dotplots and stem-and-leaf plots}
+\begin{itemize}
+\item Graph $\to$ Dotplot or Stem and Leaf
+\item Select column that contains the data to be graphed
+\item Click ``Compute!"
+\end{itemize}
+\end{block}
+
+\begin{block}{Bar plots and pie charts}
+\begin{itemize}
+\item Graph $\to$ Bar Plot or Pie Chart $\to$ With Summary
+\item Select the column containing category names
+\item Select the column containing category counts
+\item Click ``Compute!"
+\end{itemize}
+\end{block}
+
+
+\begin{block}{Pareto charts}
+Follow steps for bar chart, except...
+\begin{itemize}
+\item Under ``Order by" select ``Count descending"
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Graphs in StatCrunch}
+\begin{block}{Scatterplots and time series plots}
+\begin{itemize}
+\item Graph $\to$ Scatter plot
+\item Select column that contains the data for the x-axis (time variable for time series plots)
+\item Select column that contains the data for the y-axis
+\item For time series plots, under ``Display" select lines (shift-click to select both points and lines)
+\item Click ``Compute!"
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\end{document}

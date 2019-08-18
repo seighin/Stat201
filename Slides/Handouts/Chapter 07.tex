@@ -42,9 +42,9 @@
 \title[Chapter 7]{Stat 201: Statistics I\\ Chapter 7 }
 \author[M. Shyne]{}
 \institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
-\date[5/9/2018]{
+\date[6/30/2019]{
 \\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
-  
+
 
 \begin{document}
 \frame{\titlepage}
@@ -245,19 +245,6 @@ A confidence interval of a population proportion with confidence level $(1-\alph
 \end{block}
 \end{frame}
 
-\begin{frame}{Confidence intervals of proportions in StatCrunch}
-\begin{block}{}
-\begin{itemize}
-\item Stat $\to$ Proportion Stats $\to$ One Sample $\to$ With Summary
-\item Enter ``\# of successes" and ``\# of observations"
-\item Select ``Confidence interval for p"
-\item Enter confidence level if different than 0.95.
-\item Click ``Compute!"
-\item The confidence interval is found in ``L. Limit" and ``U. Limit"
-\end{itemize}
-\end{block}
-\end{frame}
-
 
 \begin{frame}{Confidence intervals of proportions, example}
 \begin{exampleblock}{Example}
@@ -339,20 +326,6 @@ $\ds n = \Paren{\frac {z_{\alpha/2} \times \sqrt{\hat p \hat q}}{ME}}^2 $
 \end{block}
 \end{frame}
 
-\begin{frame}{Find needed sample size with StatCrunch}
-\begin{block}{}
-\large
-\begin{itemize}
-\item Stat $\to$ Proportion Stats $\to$ One Sample $\to$ Width/Sample Size
-\item Enter ``Confidence level" if different than 0.95.
-\item Enter estimated $\hat p$ as ``Target Proportion" 
-\item Enter twice desired margin of error as ``Width"
-\item Click ``Compute!"
-\item The needed sample size is found in ``Sample size"
-\end{itemize}
-\end{block}
-
-\end{frame}
 
 
 \begin{frame}{Find needed sample size, example}
@@ -378,6 +351,7 @@ $\ds n = 504.21 \to 505$
 \end{itemize}
 \end{block}
 \end{frame}
+
 
 
 % Section 7.2
@@ -448,22 +422,6 @@ If population is normally distributed, or sample size is 30 or greater,
 \end{block}
 \end{frame}
 
-\begin{frame}{Confidence intervals of means in StatCrunch}
-\begin{block}{}
-\large
-\begin{itemize}
-\item Stat $\to$ Z Stats \bt{or} T Stats $\to$ One Sample $\to$ With Summary \bt{or}\\T Stats $\to$ One Sample $\to$ With Data
-\item For known population standard deviation (Z Stats): Enter ``Sample mean", ``Standard deviation" and ``Sample Size" 
-\item For unknown population standard deviation (T Stats): Enter ``Sample mean", ``Sample std. dev." and ``Sample Size" (not degrees of freedom)
-\item For data set (T Stat with Data): Select column which contains data
-\item Select ``Confidence interval for $\mu$"
-\item Enter confidence level if different than 0.95.
-\item Click ``Compute!"
-\item The confidence interval is found in ``L. Limit" and ``U. Limit"
-\end{itemize}
-\end{block}
-\end{frame}
-
 
 \begin{frame}{Confidence intervals for means, example}
 \begin{exampleblock}{Example}
@@ -517,19 +475,6 @@ To calculated the sample size needed for a desired margin of error,
 \end{block}
 \end{frame}
 
-\begin{frame}{Find needed sample size with StatCrunch}
-\begin{block}{}
-\begin{itemize}
-\item Stat $\to$ Z Stats $\to$ One Sample $\to$ Width/Sample Size
-\item Enter ``Confidence level" if different than 0.95.
-\item Enter estimated or given standard deviation as ``Std. dev."
-\item Enter twice desired margin of error as ``Width" 
-\item Click ``Compute!"
-\item The needed sample size is found in ``Sample size"
-\end{itemize}
-\end{block}
-
-\end{frame}
 
 \begin{frame}{Find needed sample size, example}
 \begin{exampleblock}{Example}

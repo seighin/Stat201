@@ -1,0 +1,175 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Chapter 9]{Stat 201: Statistics I\\ StatCrunch: Chapter 9 }
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[7/14/2019]{
+\\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
+
+
+\begin{document}
+\frame{\titlepage}
+
+
+% Chapter 9
+\setcounter{section}{8}
+\section{Inferences from Two Samples}
+
+% Section 9.1
+\subsection{Two Proportions}
+
+
+\begin{frame}{Hypothesis tests for two proportions in StatCrunch}
+
+\begin{block}{}
+\begin{itemize}
+\large
+\item Stat $\to$ Proportion Stats $\to$ Two Samples $\to$ With Summary
+\item Enter ``\# of successes" and ``\# of observations" for sample 1 and sample 2
+\item Select ``Hypothesis test for $p_1 - p_2$"
+\item The null hypothesis should always be $H_0: p_1 - p_2 = 0$
+\item Enter the appropriate value for the alternative hypothesis.
+\item Click ``Compute!"
+\item The test statistic and p-value are found in ``Z-Stat" and ``P-value"
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Confidence intervals for difference of proportions in StatCrunch}
+
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Proportion Stats $\to$ Two Samples $\to$ With Summary
+\item Enter ``\# of successes" and ``\# of observations" for sample 1 and sample 2
+\item Select ``Confidence interval for $p_1 - p_2$"
+\item Enter the appropriate confidence level.
+\item Click ``Compute!"
+\item The confidence interval bounds are found in ``L. Limit" and\\ ``U. Limit"
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+% Section 9.2
+\subsection{Two Means: Independent Samples}
+
+
+\begin{frame}{Hypothesis tests for two means in StatCrunch}
+
+\begin{block}{}
+\large
+\begin{itemize}
+\item Stat $\to$ T Stats $\to$ Two Samples $\to$ With Summary
+\item Enter ``Sample mean", ``Sample std. dev." and ``Sample size" for both samples
+\item Leave ``Pool variances" unchecked
+\item Select ``Hypothesis test for $\mu_1 - \mu_2$"
+\item The null hypothesis should always be $H_0: \mu_1 - \mu_2 = 0$
+\item Enter the appropriate value for the alternative hypothesis.
+\item Click ``Compute!"
+\item The test statistic and p-value are found in ``T-Stat" and ``P-value"
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Confidence intervals for difference of means in StatCrunch}
+
+\begin{block}{}
+\large
+\begin{itemize}
+\item Stat $\to$ T Stats $\to$ Two Samples $\to$ With Summary
+\item Enter ``Sample mean", ``Sample std. dev." and ``Sample size" for both samples
+\item Leave ``Pool variances" unchecked
+\item Select ``Confidence interval for $\mu_1 - \mu_2$"
+\item Enter the appropriate confidence level.
+\item Click ``Compute!"
+\item The confidence interval bounds are found in ``L. Limit" and\\ ``U. Limit"
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+% Section 9.3
+\subsection{Two Dependent Samples (Matched Pairs)}
+
+
+\begin{frame}{Hypothesis tests for matched pairs in StatCrunch}
+
+\begin{block}{}
+\large
+\begin{itemize}
+\item Stat $\to$ T Stats $\to$ Paired
+\item Select columns of data for both samples
+\item Select ``Hypothesis test for $\mu_D = \mu_1 - \mu_2$"
+\item The null hypothesis should always be $H_0: \mu_D = 0$
+\item Enter the appropriate value for the alternative hypothesis.
+\item Click ``Compute!"
+\item The test statistic and p-value are found in ``T-Stat" and ``P-value"
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Confidence intervals for matched pairs in StatCrunch}
+
+\begin{block}{}
+\begin{itemize}
+\large
+\item Stat $\to$ T Stats $\to$ Paired
+\item Select columns of data for both samples
+\item Select ``Confidence interval for $\mu_D = \mu_1 - \mu_2$"
+item Enter the appropriate confidence level.
+\item Click ``Compute!"
+\item The confidence interval bounds are found in ``L. Limit" and\\ ``U. Limit"
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\end{document}

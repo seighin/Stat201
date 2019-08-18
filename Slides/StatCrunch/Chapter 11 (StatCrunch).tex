@@ -1,0 +1,103 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Chapter 11]{Stat 201: Statistics I\\ StatCrunch: Chapter 11 }
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[7/14/2019]{
+\\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
+
+
+\begin{document}
+\frame{\titlepage}
+
+% Chapter 11
+\setcounter{section}{10}
+\section{Goodness-of-Fit and Contingency Tables}
+
+% Section 11.1
+\subsection{Goodness-of-Fit}
+
+
+
+\begin{frame}{Goodness-of-fit tests in StatCrunch}
+
+\begin{block}{}
+\large
+\begin{itemize}
+\item Stat $\to$ Goodness-of-fit $\to$ Chi-Square Test
+\item Select column that contains observed data
+\item Specify expected distribution:
+\begin{itemize}
+\item For uniform distributions, select ``All cells in equal proportion"
+\item For non-uniform distributions, select the column which contains expected frequencies
+\end{itemize}
+\item Leave default value of ``Expected" for display
+\item Click ``Compute!"
+\item The test statistic and p-value are found in ``Chi-Square" and ``P-value"
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+% Section 11.2
+\subsection{Contingency Tables}
+
+
+\begin{frame}{Tests for independence in StatCrunch}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Stat $\to$ Tables $\to$ Contingency $\to$ With Summary
+\item Select the columns that contain observed data
+\item Select the column that contains row labels
+\item If desired, select calculated values to be displayed\\(``Expected count" can be useful)
+\item Leave ``Hypothesis tests" on default value of ``Chi-Square test for independence"
+\item Click ``Compute!"
+\item In the ``Chi-Square test" table, the test statistic and p-value are found in ``Value" and ``P-value"
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\end{document}

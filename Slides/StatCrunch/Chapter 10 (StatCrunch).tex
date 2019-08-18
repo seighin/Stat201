@@ -1,0 +1,123 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Chapter 10]{Stat 201: Statistics I\\ StatCrunch: Chapter 10 }
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[7/14/2019]{
+\\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
+ 
+ 
+\begin{document}
+\frame{\titlepage}
+
+% Chapter 10
+\setcounter{section}{9}
+\section{Correlation and Regression}
+
+
+% Section 10.1
+\subsection{Correlation}
+
+
+\begin{frame}{Correlation coefficient and p-value in StatCrunch}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Stat $\to$ Summary Stats $\to$ Correlation
+\item Select the columns which contain the data
+\item Check ``Two-sided P-value"
+\item Click ``Compute!"
+\item The correlation coefficient $r$ is given, the p-value is in parentheses
+\end{itemize} 
+\end{block}
+\begin{block}{}
+\large
+Note: The test statistic for the hypothesis test can be found in StatCrunch by doing a regression, discussed in the next section. 
+\end{block}
+\end{frame}
+
+
+
+% Section 10.2
+\subsection{Regression}
+
+
+
+\begin{frame}{Regression in StatCrunch}
+\begin{block}{}
+\large
+\begin{itemize}
+\item Stat $\to$ Regression $\to$ Simple Linear
+\item Select columns for X and Y variables
+\item Select ``Hypothesis tests" (default values are fine)
+\item If desired, enter ``X value(s)" for ``Prediction of Y"
+\item If desired, select graphs to generate (the default ``Fitted line plot" is usually best)
+\item Click ``Compute!"
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Interpreting regression results in StatCrunch}
+\begin{block}{}
+\large
+\begin{itemize}
+\item ``Simple linear regression results" section contains:
+\begin{itemize}
+\item The regression equation in the form of\\ ``YVAR = intercept + slope XVAR"
+\item The correlation coefficient $r$ as ``R (correlation coefficient)"
+\item The coefficient of determination $R^2$ as ``R-sq"
+\end{itemize}
+\item The ``Parameter estimates" table contains:
+\begin{itemize}
+\item The estimates for intercept ($b_0$) and slope ($b_1$)
+\item The t statistic and p-value for the slope are the same as for a correlation hypothesis test with this data
+\end{itemize}
+\item Ignore ``Analysis of variance table for regression model"
+\item If predicted values were asked for, they will be in the ``Predicted values" table
+\item Click on the right arrow at the bottom of the results window to get to any graphs that were selected
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\end{document}

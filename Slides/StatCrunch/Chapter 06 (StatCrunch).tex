@@ -1,0 +1,97 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{shyne}
+
+% Theme settings
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Chapter \thesection\\  \secname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\AtBeginSubsection[]
+{ 	\begin{frame}{}
+
+	{
+	\usebeamerfont{frametitle}
+	\begin{beamercolorbox}
+		[wd={\textwidth}, center, sep=.2in, rounded=true, shadow=true]
+		{frametitle}
+	Section \thesection .\thesubsection\\  \subsecname 
+	\end{beamercolorbox}
+	}
+	
+	\end{frame} 
+}
+
+\title[Chapter 6]{Stat 201: Statistics I\\ Chapter 6 }
+\author[M. Shyne]{}
+\institute[Metro State]{\includegraphics[width=1.75in]{../images/metro_logo}}
+\date[6/9/2019]{
+\\ \bigskip \bigskip \includegraphics[width=.4in]{../images/cc_big}}
+
+
+\begin{document}
+\frame{\titlepage}
+
+% Chapter 6
+\setcounter{section}{5}
+\section{Normal Probability Distributions}
+
+% Section 6.1
+\subsection{The Standard Normal Distribution}
+
+
+\begin{frame}{Probabilities of normal variables in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Calculators $\to$ Normal
+\item Default mean and standard deviation correspond to standard normal
+\item To find probabilities of ranges, select ``Between"
+\item To find a probability greater or less than a z-score, choose appropriate comparison symbol and enter z-score inside parentheses (i.e. ``$P(X \le 1) =\ldots$")
+\item To find a z-score corresponding to a probability, choose appropriate comparison symbol and enter probability \emph{outside} parentheses (i.e. ``$P(X \le \ldots) = 0.385$")
+\item Click ``Compute"
+\end{itemize}
+\end{block}
+
+\begin{alertblock}{Note}
+Probabilies from uniform distributions can be found in a similar manner by using the ``Uniform" calculator.
+\end{alertblock}
+\end{frame}
+
+
+% Section 6.2
+\subsection{Real Applications of  Normal Distribution}
+
+
+\begin{frame}{Probabilities of normal variables in StatCrunch}
+\begin{block}{}
+\begin{itemize}
+\item Stat $\to$ Calculators $\to$ Normal
+\item Enter mean and standard deviation of distribution
+\item To find probabilities of ranges, select ``Between"
+\item To find a probability greater or less than a z-score, choose appropriate comparison symbol and enter z-score inside parentheses (i.e. ``$P(X \le 1) =\ldots$")
+\item To find a z-score corresponding to a probability, choose appropriate comparison symbol and enter probability \emph{outside} parentheses (i.e. ``$P(X \le \ldots) = 0.385$")
+\item Click ``Compute"
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\end{document}
